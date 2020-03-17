@@ -1,0 +1,229 @@
+ [vp] .vpw-controls {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            align-items: center;
+            width: calc(100% - 10px);
+            height: 60px;
+            background-size: 100% 100%;
+            background: white;
+            width: 100%;
+        }
+        
+        [vp] .vpw-controls .vpw-controls-subtitles,
+        [vp] .vpw-controls .vpw-controls-slider {
+            margin: 0 9px;
+            cursor: pointer;
+        }
+        
+        [vp] .vpw-controls .vpw-controls-play .vpw-component-play {
+            display: block;
+            margin: 0 8.5px;
+            cursor: pointer;
+        }
+        
+        [vp] .vpw-controls .vpw-controls-play .vpw-component-pause {
+            display: none;
+        }
+        
+        [vp] .vpw-controls .vpw-controls-play .vpw-component-restart {
+            display: none;
+        }
+        
+        [vp] .vpw-controls.vpw-playing .vpw-controls-play .vpw-component-play {
+            display: none;
+        }
+        
+        [vp] .vpw-controls.vpw-playing .vpw-controls-play .vpw-component-pause {
+            display: block;
+            margin: 0 11px;
+            cursor: pointer;
+        }
+        
+        [vp] .vpw-controls.vpw-playing .vpw-controls-play .vpw-component-restart {
+            display: none;
+        }
+        
+        [vp] .vpw-controls.vpw-stopped .vpw-controls-play .vpw-component-play {
+            display: none;
+        }
+        
+        [vp] .vpw-controls.vpw-stopped .vpw-controls-play .vpw-component-pause {
+            display: none;
+        }
+        
+        [vp] .vpw-controls.vpw-stopped .vpw-controls-play .vpw-component-restart {
+            display: block;
+            margin: 0 2px;
+            cursor: pointer;
+        }
+        
+        [vp] .vpw-controls.vpw-subtitles .vpw-controls-subtitles .vpw-legenda-habilitar {
+            display: block;
+        }
+        
+        [vp] .vpw-controls.vpw-subtitles .vpw-controls-subtitles .vpw-legenda-desabilitar {
+            display: none;
+        }
+        
+        [vp] .vpw-controls .vpw-controls-subtitles .vpw-legenda-habilitar {
+            display: none;
+        }
+        
+        [vp] .vpw-controls .vpw-controls-subtitles .vpw-legenda-desabilitar {
+            display: block;
+        }
+        
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(0deg);
+                /* IE 9 */
+                transform: rotate(0deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(360deg);
+                /* IE 9 */
+                transform: rotate(360deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+        }
+        
+        @keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(0deg);
+                /* IE 9 */
+                transform: rotate(0deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(360deg);
+                /* IE 9 */
+                transform: rotate(360deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+        }
+        
+        [vp] .vpw-speed-default {
+            border: 1px solid grey;
+            border-radius: 3px 3px 3px 3px;
+            padding: 3px 4px;
+            height: 100%;
+            color: grey;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        [vp] .vpw-img-default {
+            display: none;
+            padding: 2px;
+            padding-left: 2.2px;
+            cursor: pointer;
+        }
+        
+        [vp] .vpw-border-default {
+            display: none;
+            border: 1px solid #999999;
+            border-radius: 0px 0px 3px 3px;
+        }
+        
+        [vp] .vpw-elem-speed {
+            display: none;
+            position: absolute;
+            bottom: 22px;
+            cursor: pointer;
+        }
+        
+        [vp] .vpw-block-speed {
+            list-style-type: none;
+            background-color: #003F86;
+            color: white;
+            font-size: 10px;
+            width: 25.5px;
+            text-align: center;
+        }
+        
+        [vp] .vpw-block-speed:hover {
+            color: #67C8D5;
+        }
+        
+        [vp] .vpw-controls-speed {
+            position: relative;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        [vp] .vpw-controls-speed-number {
+            width: 25.5px;
+            padding-left: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        [vp] .vpw-block-speed-3 {
+            border-radius: 5px 5px 0px 0px;
+        }
+        
+        [vp] .vpw-controls-slider {
+            -webkit-appearance: none;
+            width: 50%;
+            margin: 2.5px 0;
+            height: 7px;
+            background-color: transparent;
+        }
+        
+        [vp] .vpw-controls-slider .vpw-slider {
+            width: 100%;
+            height: 7px;
+        }
+        
+        [vp] .vpw-controls-slider .vpw-slider.noUi-target {
+            box-shadow: none;
+            border: 0;
+        }
+        
+        [vp] .vpw-controls-slider .vpw-slider.noUi-connect {
+            background-color: #003F86;
+        }
+        
+        [vp] .vpw-controls-slider .vpw-slider .noUi-background {
+            background-color: #B8B8B8;
+            box-shadow: none;
+        }
+        
+        [vp] .vpw-controls-slider .vpw-slider .noUi-origin {
+            border-radius: 1px;
+        }
+        
+        [vp] .vpw-controls-slider .vpw-slider .noUi-handle {
+            width: 0px;
+            height: 0px;
+            left: -8px;
+            top: -8px;
+            border-radius: 50%;
+        }
+        
+        [vp] .vpw-controls-slider .vpw-slider .noUi-handle:after,
+        [vp] .vpw-controls-slider .vpw-slider .noUi-handle:before {
+            display: none;
+        }

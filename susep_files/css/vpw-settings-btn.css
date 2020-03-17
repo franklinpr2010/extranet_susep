@@ -1,0 +1,29 @@
+[vp] .vpw-settings-btn {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+[vp] .vpw-settings-btn .vpw-settings-btn-menu {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 18px;
+    left: 20px;
+}
+
+[vp] .vpw-settings-btn .vpw-settings-btn-menu.active {
+    display: block;
+}
+
+[vp] .vpw-settings-btn .vpw-settings-btn-close {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+}
