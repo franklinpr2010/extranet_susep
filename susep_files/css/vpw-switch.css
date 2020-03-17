@@ -1,0 +1,63 @@
+ [vp] {
+    /* Hide default HTML checkbox */
+    /* The slider */
+    /* Rounded sliders */
+}
+
+[vp] .vpw-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 21px;
+    float: right;
+    margin-top: -12px;
+}
+
+[vp] .vpw-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[vp] .vpw-slider-check {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2196F3;
+}
+
+[vp] .vpw-slider-check:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+}
+
+[vp] input:checked + .vpw-slider-check {
+    background-color: #2196F3;
+}
+
+[vp] input:focus + .vpw-slider-check {
+    box-shadow: 0 0 1px #ccc;
+}
+
+[vp] input:checked + .vpw-slider-check:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+[vp] .vpw-slider-check.vpw-round {
+    border-radius: 34px;
+}
+
+[vp] .vpw-slider-check.vpw-round:before {
+    border-radius: 50%;
+    top: -3px;
+}
