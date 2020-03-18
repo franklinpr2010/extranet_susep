@@ -31,17 +31,21 @@ function load_scripts() {
     wp_enqueue_style('brasilgovportal', get_template_directory_uri() . '/susep_files/brasilgovportal-b9966f9.css');
     wp_enqueue_style('brasilgovtiles', get_template_directory_uri() . '/susep_files/brasilgovtiles-fadba58.css');
 
-    //wp_register_script( 'jquery-two', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
-     //array(), '1.11.3',  true);
+    wp_register_script( 'jquery-two', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
+     array(), '1.11.3',  true);
      //antes de colocar o bootstrap-min na fila, vai colocar o outro
-    //wp_enqueue_script('bootstrap-min', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery-two'), 
-    // null, true);
-    //wp_enqueue_script('fancybox-pack', get_template_directory_uri() . '/js/jquery.fancybox.pack.js', array('jquery-two'), null, true);
-   // wp_enqueue_script('waypoints-min', get_template_directory_uri() . '/js/jquery.waypoints.min.js', array('jquery-two'), null, true);
-    //wp_enqueue_script('retina-min', get_template_directory_uri() . '/js/retina.min.js', array('jquery-two'), null, true);
-    //wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.js', array('jquery-two'), null, true);
-    //wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery-two'), null, true);
+    wp_enqueue_script('bootstrap-min', get_template_directory_uri() . '/susep_files/js/bootstrap.min.js', array('jquery-two'), 
+     null, true);
+    wp_enqueue_script('fancybox-pack', get_template_directory_uri() . '/susep_files/js/jquery.fancybox.pack.js', array('jquery-two'), null, true);
+    wp_enqueue_script('waypoints-min', get_template_directory_uri() . '/susep_files/js/jquery.waypoints.min.js', array('jquery-two'), null, true);
+    wp_enqueue_script('retina-min', get_template_directory_uri() . '/susep_files/js/retina.min.js', array('jquery-two'), null, true);
+    wp_enqueue_script('modernizr', get_template_directory_uri() . '/susep_files/js/modernizr.js', array('jquery-two'), null, true);
+    wp_enqueue_script('main', get_template_directory_uri() . '/susep_files/js/main.js', array('jquery-two'), null, true);
 
+    
+
+    //<script async="" src="https://connect.facebook.net/pt_BR/all.js#xfbml=1"></script>
+    //<script async="" src="./susep_files/gtm.js.download"></script>
 }
 
 

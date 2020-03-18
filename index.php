@@ -179,38 +179,7 @@
             </div>-->
         </div>
      </header>   
-
-
-
-    <script src="./susep_files/js/datepicker.js"  type="text/javascript"></script>
-    <script type="text/javascript" src="./susep_files/resourceplone.app.jquery-cachekey-13130680499950c9e6af75432e751d9b.js.download"></script>
-    <script type="text/javascript" src="./susep_files/collective.js.jqueryui.custom.min-cachekey-171f5734b199f56badf000c24d73e8b6.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourceplone.formwidget.recurrencejquery.tmpl-beta1-cachekey-c96e25e9c401a5912375d0fd40c90ec0.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourcecollective.js.bootstrapjsbootstrap.min-cachekey-14445e52f9196da70fdeee5820035fde.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourcecollective.coverjsmain-cachekey-fa035302b62c43cffcb35e290414cde3.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourcebrasil.gov.tilesvendorjquery.jplayer.min-cachekey-a7d439f96cd4d7dd2e57ddb2d447b2a6.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourcedropdown-menu-cachekey-10b64111b6c44ececf53dc9597dbdcca.js.download"></script>
-    <script defer="defer" src="./susep_files/brasilgovagenda-37f614a.js.download"></script>
-    <script defer="defer" src="./susep_files/brasilgovportal-b9966f9.js.download"></script>
-    <script defer="defer" src="./susep_files/brasilgovtiles-fadba58.js.download"></script>
-    <script src="./susep_files/iframe_api"></script>
-    <script type="text/javascript" id="www-widgetapi-script" src="./susep_files/www-widgetapi.js.download" async=""></script>
-     <style type="text/css" media="screen">
-        @import url(https://www.gov.br/casacivil/portal_css/Sunburst%20Theme/resourceplone.app.jquerytools.dateinput-cachekey-96e02b06fe70d0f46abf5ef1bb9c42fe.css);
-    </style>
-    <script async="" src="https://connect.facebook.net/pt_BR/all.js#xfbml=1"></script>
-    <script async="" src="./susep_files/gtm.js.download"></script>
-    <script defer="defer" src="./susep_files/brasilgovagenda-37f614a.js.download"></script>
-    <script defer="defer" src="./susep_files/brasilgovportal-b9966f9.js.download"></script>
-    <script defer="defer" src="./susep_files/brasilgovtiles-fadba58.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourceplone.app.jquery-cachekey-13130680499950c9e6af75432e751d9b.js.download"></script>
-    <script type="text/javascript" src="./susep_files/collective.js.jqueryui.custom.min-cachekey-171f5734b199f56badf000c24d73e8b6.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourceplone.formwidget.recurrencejquery.tmpl-beta1-cachekey-c96e25e9c401a5912375d0fd40c90ec0.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourcecollective.js.bootstrapjsbootstrap.min-cachekey-14445e52f9196da70fdeee5820035fde.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourcecollective.coverjsmain-cachekey-fa035302b62c43cffcb35e290414cde3.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourcebrasil.gov.tilesvendorjquery.jplayer.min-cachekey-a7d439f96cd4d7dd2e57ddb2d447b2a6.js.download"></script>
-    <script type="text/javascript" src="./susep_files/resourcedropdown-menu-cachekey-10b64111b6c44ececf53dc9597dbdcca.js.download"></script>
-    <script src="./susep_files/iframe_api"></script>
+     <?php wp_footer(); ?>
     <script id="google-tag-manager">
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
