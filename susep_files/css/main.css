@@ -585,11 +585,13 @@ margin-top:50px;
 	border:#f4f3f3 1px solid;
 }
 
+
 .destaques-carrousel {
 	list-style-type:none;
-	margin-left:140px;
-	margin-right:auto;
-	align-content: center;
+	margin: 0 auto;
+	max-width: 900px;
+	height: 100px;
+
 }
 
 

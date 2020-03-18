@@ -79,7 +79,7 @@ add_action( 'widgets_init', 'extranet_sidebars' );
 
 function extranet_sidebars() {
         register_sidebar(array(
-                'name'=>  'Banner',
+                'name'=>  'Título Principal',
                 'id' => 'banner',
                 'description' => 'Escreva algum texto aqui',
                 'before_widget' => '<div class="widget-wrapper">',
@@ -88,4 +88,10 @@ function extranet_sidebars() {
                 'after_title' => '</a></h2>',
             )
         );
+
+        register_sidebar(array(
+            'name'=>  'Imagem-Principal',
+            'id' => 'imagem-principal',
+        )
+    );
 }
