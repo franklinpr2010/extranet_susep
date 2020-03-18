@@ -1518,7 +1518,6 @@ dl.portlet .ui-state-highlight a, dl.portlet .ui-widget-content .ui-state-highli
 
 /* - columns.css - */
 @media screen {
-/* https://www.gov.br/casacivil/portal_css/columns.css?original=1 */
 div.row {
 float: left;
 width: 100%;
@@ -1589,10 +1588,6 @@ div.position-2\3a 3 {margin-left: -32.205%;} /* */
 
 /* - authoring.css - */
 @media screen {
-/* https://www.gov.br/casacivil/portal_css/authoring.css?original=1 */
-/* */
-/* */
-/* */
 #content ul.formTabs {
 background-color: #ddd;
 border: 0.3em solid #ddd;

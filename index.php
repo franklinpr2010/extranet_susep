@@ -5,11 +5,15 @@
 <!--Head-->
 <?php include 'head.php'; ?>
 <body class="default-header-template portal-institucional cover-layout-layout-vazio template-view portaltype-collective-cover-content site-pt-br section-pagina-inicial userrole-anonymous" data-base-url="https://www.gov.br/casacivil/pt-br/pagina-inicial" data-portal-url="https://www.gov.br/casacivil" dir="ltr">
-    <!-- Google Tag Manager (noscript) -->
+
+
+     <!-- Google Tag Manager (noscript) -->
     <!--Tag Manager-->
     <?php include 'tag-manager.php'; ?>
     <!--Header-->
     <?php include 'header.php'; ?>
+    <!--Header-->
+    <?php include 'body.php'; ?>
     <!--Scripts JavaScript-->
     <?php wp_footer(); ?>
 </html>

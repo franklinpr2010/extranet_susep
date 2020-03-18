@@ -1,8 +1,7 @@
 <!--Passar menu para o bootstrap-->
 <div class="header-accessibility">    
                 <!--Menu do topo-->
-                <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => '', 'menu_class' => 'primary-nav')) ?>
-                <!--<ul>
+                <ul>
                      <li>
                         <a href="https://www.gov.br/pt-br/orgaos-do-governo">Órgãos do Governo</a>
                     </li>
@@ -26,5 +25,5 @@
                             <i class="fas fa-adjust"></i>
                         </a>
                     </li>
-                </ul>-->
+                </ul>
  </div>

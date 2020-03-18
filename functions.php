@@ -11,7 +11,7 @@ function load_scripts() {
     wp_enqueue_style('sunburst-theme', 'https://www.gov.br/casacivil/portal_css/Sunburst%20Theme/IEFixes-cachekey-9e6170e03a0cfc22bb302f2b78303338.css');
     //Arquivos do template da susep
     wp_enqueue_style('tippy', get_template_directory_uri() . '/susep_files/css/tippy.css');
-    wp_enqueue_style('barra-brasil', get_template_directory_uri() . '/susep_files/css/barra-brasil.css');
+    //wp_enqueue_style('barra-brasil', get_template_directory_uri() . '/susep_files/css/barra-brasil.css');
     wp_enqueue_style('footer-brasil', get_template_directory_uri() . '/susep_files/css/footer-brasil.css');
     wp_enqueue_style('vpw-switch', get_template_directory_uri() . '/susep_files/css/vpw-switch.css');
     wp_enqueue_style('vpw-settings-btn', get_template_directory_uri() . '/susep_files/css/vpw-settings-btn.css');
@@ -31,8 +31,8 @@ function load_scripts() {
     wp_enqueue_style('brasilgovportal', get_template_directory_uri() . '/susep_files/css/brasilgovportal-b9966f9.css');
     wp_enqueue_style('brasilgovtiles', get_template_directory_uri() . '/susep_files/css/brasilgovtiles-fadba58.css');
 
-    wp_register_script( 'jquery-two', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
-     array(), '1.11.3',  true);
+    //wp_register_script( 'jquery-two', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
+     //array(), '1.11.3',  true);
      //antes de colocar o bootstrap-min na fila, vai colocar o outro
     wp_enqueue_script('bootstrap-min', get_template_directory_uri() . '/susep_files/js/bootstrap.min.js', array('jquery-two'), 
      null, true);
@@ -41,7 +41,7 @@ function load_scripts() {
     wp_enqueue_script('retina-min', get_template_directory_uri() . '/susep_files/js/retina.min.js', array('jquery-two'), null, true);
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/susep_files/js/modernizr.js', array('jquery-two'), null, true);
     wp_enqueue_script('main', get_template_directory_uri() . '/susep_files/js/main.js', array('jquery-two'), null, true);
-    wp_enqueue_script('barra_2.0', get_template_directory_uri() . '/susep_files/js/barra_2.0.js', array('jquery-two'), null, true);
+    //wp_enqueue_script('barra_2.0', get_template_directory_uri() . '/susep_files/js/barra_2.0.js', array('jquery-two'), null, true);
     wp_enqueue_script('brasilgovagenda', get_template_directory_uri() . '/susep_files/js/brasilgovagenda.js', array('jquery-two'), null, true);
     wp_enqueue_script('brasilgovportal', get_template_directory_uri() . '/susep_files/js/brasilgovportal.js', array('jquery-two'), null, true);
     wp_enqueue_script('brasilgovtiles', get_template_directory_uri() . '/susep_files/js/brasilgovtiles.js', array('jquery-two'), null, true);
@@ -75,3 +75,17 @@ register_nav_menus(
 
 );
 
+add_action( 'widgets_init', 'extranet_sidebars' );
+
+function extranet_sidebars() {
+        register_sidebar(array(
+                'name'=>  'Banner',
+                'id' => 'banner',
+                'description' => 'Escreva algum texto aqui',
+                'before_widget' => '<div class="widget-wrapper">',
+                'after_widget' => '</div>',
+                'before_title' => '<h2><a href="#">',
+                'after_title' => '</a></h2>',
+            )
+        );
+}

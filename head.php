@@ -10,7 +10,7 @@
     <!--<base href="https://www.gov.br/casacivil/pt-br">-->
     <base href=".">
     <!--[if lt IE 7]></base><![endif]-->
-    <meta property="og:title" content="Página Inicial">
+    <!--<meta property="og:title" content="Página Inicial">
     <meta property="og:description" content="">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.gov.br/casacivil/pt-br/pagina-inicial">
@@ -20,21 +20,21 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@">
     <meta property="creator.productor" content="https://www.gov.br/planalto">
-    <meta name="generator" content="Plone - http://plone.org">
+    <meta name="generator" content="Plone - http://plone.org">-->
     <!--[if lt IE 8]>    
     <link rel="stylesheet" type="text/css" href="https://www.gov.br/casacivil/portal_css/Sunburst%20Theme/IEFixes-cachekey-9e6170e03a0cfc22bb302f2b78303338.css" media="screen" />
         <![endif]-->
-    <link rel="stylesheet" type="text/css" href="./susep_files/resourcegovbr.policycanais-cachekey-21138793f2acbcfcb6c97b7542835f0f.css">
+    <!--<link rel="stylesheet" type="text/css" href="./susep_files/resourcegovbr.policycanais-cachekey-21138793f2acbcfcb6c97b7542835f0f.css">-->
     <title>Página Inicial — Português (Brasil)</title>
-    <link rel="http://purl.org/dc/terms/subject http://schema.org/about http://xmlns.com/foaf/0.1/primaryTopic" href="http://vocab.e.gov.br/2011/03/vcge#esquema">
-    <link rel="canonical" href="https://www.gov.br/casacivil/pt-br">
+    <!--<link rel="http://purl.org/dc/terms/subject http://schema.org/about http://xmlns.com/foaf/0.1/primaryTopic" href="http://vocab.e.gov.br/2011/03/vcge#esquema">-->
+    <!--<link rel="canonical" href="https://www.gov.br/casacivil/pt-br">-->
     <link rel="search" href="https://www.gov.br/casacivil/pt-br/@@search" title="Buscar neste site">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/favicons/apple-touch-icon.png">
+    <!--<link rel="apple-touch-icon" sizes="180x180" href="https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/favicons/favicon-16x16.png">
-    <link rel="manifest" href="https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/favicons/manifest.json">
-    <link rel="mask-icon" href="https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/favicons/safari-pinned-tab.svg" color="#00a300">
-    <meta name="msapplication-config" content="++theme++padrao_govbr/favicons/browserconfig.xml">
+    <link rel="manifest" href="https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/favicons/manifest.json">-->
+    <!--<link rel="mask-icon" href="https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/favicons/safari-pinned-tab.svg" color="#00a300">
+    <meta name="msapplication-config" content="++theme++padrao_govbr/favicons/browserconfig.xml">-->
     <meta name="theme-color" content="#00a300">
 </head>

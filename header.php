@@ -15,7 +15,7 @@
 
        
         <!--Menu Head-->
-        <?php include 'menu-head.php'; ?>
+        <?php include 'menu-topo.php'; ?>
         <?php include 'search.php'; ?>
 
     </div>
@@ -41,5 +41,8 @@
             </div>
         </div>
     </div>
+    
+    <?php include 'menu-navigator.php'; ?>
+    
 
 </header>
