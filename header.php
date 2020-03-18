@@ -31,7 +31,7 @@
                         </a>
                     </div>
                     <div class="logo">
-                        <h1><a id="portal-title-sub" href="https://www.gov.br/casacivil/pt-br" title="">SUSEP</a></h1>
+                        <h1><a id="portal-title-sub" href="http://www.susep.gov.br/" title="">SUSEP</a></h1>
                     </div>
                 </div>
                 <div class="links-destaque-institucional">
