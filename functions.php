@@ -50,3 +50,14 @@ function load_scripts() {
 
 
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
+
+//criando o menu
+register_nav_menus( 
+    
+    array(
+        'primary' => 'Primary Menu',
+        'social' => 'Social Menu'
+    )
+
+);
+
