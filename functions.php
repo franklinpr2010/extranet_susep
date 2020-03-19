@@ -30,6 +30,7 @@ function load_scripts() {
     wp_enqueue_style('brasilgovagenda', get_template_directory_uri() . '/susep_files/css/brasilgovagenda-37f614a.css');
     wp_enqueue_style('brasilgovportal', get_template_directory_uri() . '/susep_files/css/brasilgovportal-b9966f9.css');
     wp_enqueue_style('brasilgovtiles', get_template_directory_uri() . '/susep_files/css/brasilgovtiles-fadba58.css');
+   
 
     //wp_register_script( 'jquery-two', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
      //array(), '1.11.3',  true);
@@ -93,5 +94,15 @@ function extranet_sidebars() {
             'name'=>  'Imagem-Principal',
             'id' => 'imagem-principal',
         )
-    );
+        );
+
+        register_sidebar(array(
+            'name'=>  'Menu-Destaque',
+            'id' => 'menu-destaque',
+        )
+        );
 }
+
+
+add_theme_support( 'post-thumbnails', array( 'page', 'post' ) );
+add_theme_support( 'automatic-feed-links' );
