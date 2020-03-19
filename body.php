@@ -7,3 +7,4 @@
 </div>
 
 <?php include 'carrousel.php'; ?>
+<?php include 'cards-first.php'; ?>

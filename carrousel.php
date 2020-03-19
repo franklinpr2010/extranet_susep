@@ -25,11 +25,12 @@
                   ?>
                   </a>
                   <div class="nitf-basic-tile tile-content">
-                                        <?php 
-                    if(is_active_sidebar('banner')) {
-                    dynamic_sidebar('banner');
-                    }
+                    <?php 
+                        if(is_active_sidebar('banner')) {
+                        dynamic_sidebar('banner');
+                        }
                     ?>
+                    
                     <div class="assuntos-em-alta" style="position:relative">
                       <div class="tile-header" style="position:relative;width:215px;margin-right:auto;margin-left:auto">
                         <h2>Destaques</h2>
