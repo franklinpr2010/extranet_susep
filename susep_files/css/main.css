@@ -624,3 +624,10 @@ margin-top:50px;
     font-size: 17px;
     font-weight: 700;
 }
+
+.center-div
+{
+  margin: 0 auto;
+  height: 200px;
+  border-radius: 3px;
+}

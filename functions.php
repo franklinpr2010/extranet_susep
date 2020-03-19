@@ -63,6 +63,17 @@ function load_scripts() {
     //<script async="" src="./susep_files/gtm.js.download"></script>
 }
 
+
+/**
+ * Mostrar custom fields
+ *  */ 
+function showhiddencustomfields() {
+    echo "<style type='text/css'>#postcustom .hidden { display: table-row; }</style>
+";
+}
+
+add_action( 'admin_head', 'showhiddencustomfields' );
+
 //Fazendo a chamada dos scripts
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
@@ -77,6 +88,9 @@ register_nav_menus(
 
 add_action( 'widgets_init', 'extranet_sidebars' );
 
+/**
+ * Adicionando imagens e títulos dinâmicos
+ */
 function extranet_sidebars() {
         register_sidebar(array(
                 'name'=>  'Título Principal',
@@ -93,5 +107,13 @@ function extranet_sidebars() {
             'name'=>  'Imagem-Principal',
             'id' => 'imagem-principal',
         )
-    );
+        );
 }
+
+
+
+/**
+ * Adicionando imagem aos post-thumbnails, no caso dos posts
+ */
+add_theme_support( 'post-thumbnails', array( 'page', 'post' ) );
+add_theme_support( 'automatic-feed-links' );
