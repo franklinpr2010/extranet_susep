@@ -1,5 +1,5 @@
 <header id="main-header">
-    <div class="header-wrapper">
+    <div class="header-wrapper" ativo>
         <div id="logo">
             <a id="portal-img" href=""></a>
             <a id="portal-img" href="https://www.gov.br/casacivil/pt-br"></a>
@@ -19,3 +19,5 @@
     </div>
     <?php include 'menu\menu-navigator.php'; ?>
 </header>
+
+
