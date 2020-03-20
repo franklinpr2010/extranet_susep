@@ -7,12 +7,13 @@
 <div id="wrapper">
     <!-- Columns -->
     <div id="main">
-       
         <main id="main-content" role="main">
             <?php include 'carrousel.php'; ?>
-            <?php include 'thumbnails-destaque.php'; ?>
-            <?php include 'thumbnails-cidadao.php'; ?>
-            <?php include 'thumbnails-planos.php'; ?>
+            <?php include 'thumbnails\thumbnails-destaque.php'; ?>
+            <?php include 'thumbnails\thumbnails-cidadao.php'; ?>
+            <?php include 'thumbnails\thumbnails-planos.php'; ?>
+            <?php include 'libras.php'; ?>
+            <?php include 'footer.php'; ?>
         </main>
     </div>
 </div>
