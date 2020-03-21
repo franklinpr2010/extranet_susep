@@ -21,6 +21,7 @@
     <meta name="twitter:site" content="@">
     <meta property="creator.productor" content="https://www.gov.br/planalto">
     <meta name="generator" content="Plone - http://plone.org">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--[if lt IE 8]>    
     <link rel="stylesheet" type="text/css" href="https://www.gov.br/casacivil/portal_css/Sunburst%20Theme/IEFixes-cachekey-9e6170e03a0cfc22bb302f2b78303338.css" media="screen" />
         <![endif]-->

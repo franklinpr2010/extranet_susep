@@ -12415,3 +12415,89 @@ html body.contraste #main-navigation .submenu .submenu{
     padding-top:40px;
     padding-bottom:40px
 }
+
+
+ .lista-servicos.responsive {
+            width: 100%;
+        }
+        
+        .lista-servicos.responsive {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .lista-servicos.responsive .slider {
+            width: 100%;
+            height: 580px;
+            /*overflow-x: hidden;
+            overflow-y: hidden;*/
+            overflow: hidden;
+            position: relative;
+        }
+        /* TODO: Descobrir por que precisa desse padding */
+        /* .lista-servicos.responsive .itens {
+            padding-left: 20px;
+        }
+        */
+        
+        .lista-servicos.responsive .itens .list-item {
+            height: 240px;
+        }
+        
+        .lista-servicos.responsive .itens div.sliderGroup {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 280px;
+        }
+        
+        .lista-servicos.responsive .sliderControls {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .lista-servicos.responsive .sliderControls > div {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 20px;
+            border: 1px solid #666;
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+        }
+        
+        .lista-servicos.responsive .sliderControls > div:last-child {
+            margin-right: 0;
+        }
+        
+        .lista-servicos.responsive .sliderControls > div.selected {
+            background: #999;
+        }
+        
+        .lista-servicos.responsive .sliderControlBar {
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+        }
+        
+        .lista-servicos.responsive .sliderControlBar .sliderControlBarTotal {
+            width: 200px;
+            height: 8px;
+            margin: 0 auto;
+            border: 1px solid transparent;
+            background: #9E9D9D;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .lista-servicos.responsive .sliderControlBar .sliderControlBarTotal .sliderControlBarDial {
+            background: #0C326F;
+            border-radius: 5px;
+            height: 8px;
+        }
