@@ -2,7 +2,7 @@
 
 function load_scripts() {
     //Colocando na fila uma folha de estilo, primeiro parâmetro é um identificador, o segundo é o local
-    //wp_enqueue_style('bootstrap-min', get_template_directory_uri() . '/susep_files/css/bootstrap.min.css');
+    wp_enqueue_style('bootstrap-min', get_template_directory_uri() . '/susep_files/css/bootstrap.min.css');
     wp_enqueue_style('fancybox', get_template_directory_uri() . '/susep_files/css/jquery.fancybox.css');
     wp_enqueue_style('main', get_template_directory_uri() . '/susep_files/css/main.css');
     wp_enqueue_style('responsive', get_template_directory_uri() . '/susep_files/css/responsive.css');
@@ -36,10 +36,14 @@ function load_scripts() {
     wp_enqueue_style('resourcegovbr-policycanais', get_template_directory_uri() . '/susep_files/css/resourcegovbr.policycanais.css');
     wp_enqueue_style('resourcecollective.nitfnitf', 'https://www.gov.br/casacivil/portal_css/Sunburst%20Theme/resourcecollective.nitfnitf-cachekey-03309e9fe6b9d18d52df59d771e5ea75.css');
     //indicadores css
-    wp_enqueue_style('blog-single-style', '/susep_files/css/indicadores/blog-single-style.css');
-    wp_enqueue_style('blog-style', '/susep_files/css/indicadores/blog-style.css');
-    wp_enqueue_style('service-style', '/susep_files/css/indicadores/service-style.css');
-    wp_enqueue_style('style-style', '/susep_files/css/indicadores/style.css');
+    //wp_enqueue_style('blog-single-style', get_template_directory_uri() . '/susep_files/css/indicadores/blog-single-style.css');
+    //wp_enqueue_style('blog-style', get_template_directory_uri() . '/susep_files/css/indicadores/blog-style.css');
+    //wp_enqueue_style('service-style',get_template_directory_uri() .  '/susep_files/css/indicadores/service-style.css');
+    //wp_enqueue_style('style-style', get_template_directory_uri() . '/susep_files/css/indicadores/style.css');
+    wp_enqueue_style('font2', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr');
+   
+
+
 
     
 
@@ -48,8 +52,8 @@ function load_scripts() {
      wp_enqueue_script('jquery-two', get_template_directory_uri() . '/susep_files/js/resourceplone.app.jquery-cachekey.js', array(), null, true);
      wp_enqueue_script('collective-js', get_template_directory_uri() . '/susep_files/js/collective.js.jqueryui.custom.min-cachekey.js', array('jquery-two'), null, true);
      //antes de colocar o bootstrap-min na fila, vai colocar o outro
-    //wp_enqueue_script('bootstrap-min', get_template_directory_uri() . '/susep_files/js/bootstrap.min.js', array('jquery-two'), 
-    //null, true);
+    wp_enqueue_script('bootstrap-min', get_template_directory_uri() . '/susep_files/js/bootstrap.min.js', array('jquery-two'), 
+    null, true);
     wp_enqueue_script('fancybox-pack', get_template_directory_uri() . '/susep_files/js/jquery.fancybox.pack.js', array('jquery-two'), null, true);
     wp_enqueue_script('waypoints-min', get_template_directory_uri() . '/susep_files/js/jquery.waypoints.min.js', array('jquery-two'), null, true);
     wp_enqueue_script('retina-min', get_template_directory_uri() . '/susep_files/js/retina.min.js', array('jquery-two'), null, true);
@@ -76,6 +80,12 @@ function load_scripts() {
      wp_enqueue_script('social', get_template_directory_uri() . '/susep_files/js/social.js', array('jquery-two'), null, true);
     //<script async="" src="https://connect.facebook.net/pt_BR/all.js#xfbml=1"></script>
     //<script async="" src="./susep_files/gtm.js.download"></script>
+    //Indicadores
+    //wp_enqueue_script('social', get_template_directory_uri() . '/susep_files/js/indicadores/script.js', array('jquery-two'), null, true);
+    //wp_enqueue_script('isotope', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', array('jquery-two'), null, true);
+    wp_enqueue_script('isotope2', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', array('jquery-two'), null, true);
+
+    
 }
 
 /**

@@ -11,7 +11,7 @@ $work = new WP_Query( $args );
 //se tiver posts
 if( $work->have_posts() ):
 ?>
-    <div class="row tile-default">
+    <div class="row">
         <div class="row-content">
 
             <div class="column col-md-12 " data-panel="">
