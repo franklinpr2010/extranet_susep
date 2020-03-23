@@ -25,7 +25,7 @@
     <div class="navigation-content">
         <nav id="main-navigation" class="navigation-cell">
         <ul class="list-navigation">
-                <li id="portaltab-composicao" class="plain dropdown-submenu"><a href="https://www.gov.br/casacivil/pt-br/composicao" title="" class="plain">Composi��o</a>
+                <li id="portaltab-composicao" class="plain dropdown-submenu"><a href="https://www.gov.br/casacivil/pt-br/composicao" title="" class="plain">Composição</a>
                     <ul class="submenu">
                         <li>
 

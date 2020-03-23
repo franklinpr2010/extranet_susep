@@ -1,6 +1,6 @@
 
 <div id="viewlet-above-content">
-<div id="viewlet-tileshare" data-title-fb="Compartilhar no Facebook (abre em nova janela)" data-title-twitter="Tweet (abre em nova janela)" data-title-linkedin="Compartilhar no Linkedin  (abre em nova janela)" data-title-gplus="Compartilhar no Google+  (abre em nova janela)" data-title-link="Copiar para área de transferência" data-title-more="Mais opções">
+<div id="viewlet-tileshare"  data-title-more="Mais opções">
 </div>
 </div>
 <div class="">

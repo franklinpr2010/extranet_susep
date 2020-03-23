@@ -35,7 +35,12 @@ function load_scripts() {
     wp_enqueue_style('embedder-cachekey', get_template_directory_uri() . '/susep_files/css/embedder-cachekey.css');
     wp_enqueue_style('resourcegovbr-policycanais', get_template_directory_uri() . '/susep_files/css/resourcegovbr.policycanais.css');
     wp_enqueue_style('resourcecollective.nitfnitf', 'https://www.gov.br/casacivil/portal_css/Sunburst%20Theme/resourcecollective.nitfnitf-cachekey-03309e9fe6b9d18d52df59d771e5ea75.css');
-    
+    //indicadores css
+    wp_enqueue_style('blog-single-style', '/susep_files/css/indicadores/blog-single-style.css');
+    wp_enqueue_style('blog-style', '/susep_files/css/indicadores/blog-style.css');
+    wp_enqueue_style('service-style', '/susep_files/css/indicadores/service-style.css');
+    wp_enqueue_style('style-style', '/susep_files/css/indicadores/style.css');
+
     
 
     //wp_register_script( 'jquery-two', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
@@ -72,7 +77,6 @@ function load_scripts() {
     //<script async="" src="https://connect.facebook.net/pt_BR/all.js#xfbml=1"></script>
     //<script async="" src="./susep_files/gtm.js.download"></script>
 }
-
 
 /**
  * Mostrar custom fields
@@ -119,8 +123,6 @@ function extranet_sidebars() {
         )
         );
 }
-
-
 
 /**
  * Adicionando imagem aos post-thumbnails, no caso dos posts
