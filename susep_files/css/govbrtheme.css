@@ -3859,7 +3859,9 @@ footer.portal-footer .govbr-logo{
     width:165px;
     height:60px;
     margin-bottom:52px;
-    background-image:url(/wpcurso/wp-content/themes/extranet_susep/susep_files/img/govbr.png);
+
+
+    background-image:url(/wp-content/themes/extranet_susep/susep_files/img/govbr.png);
     background-size:cover
 }
 footer.portal-footer .list-navigation{
@@ -6587,17 +6589,17 @@ footer.portal-footer .redes-e-logos #footer-brasil a{
         display:block
     }
 }
-.portaltype-collective-cover-content #content .agenda-tile .swiper-container .swiper-button-next{
-    background-image:url(++theme++padrao_govbr/img/agenda-sprite.png)
-}
+/*.portaltype-collective-cover-content #content .agenda-tile .swiper-container .swiper-button-next{
+    background-image:url(css/++theme++padrao_govbr/img/agenda-sprite.png)
+}*/
 @media only screen and (max-width:1023px){
     .portaltype-collective-cover-content #content .agenda-tile .swiper-container .swiper-button-next{
         right:10px
     }
 }
-.portaltype-collective-cover-content #content .agenda-tile .swiper-container .swiper-button-prev{
-    background-image:url(++theme++padrao_govbr/img/agenda-sprite.png)
-}
+/*.portaltype-collective-cover-content #content .agenda-tile .swiper-container .swiper-button-prev{
+    background-image:url(css/++theme++padrao_govbr/img/agenda-sprite.png)
+}*/
 @media only screen and (max-width:1023px){
     .portaltype-collective-cover-content #content .agenda-tile .swiper-container .swiper-button-prev{
         left:10px

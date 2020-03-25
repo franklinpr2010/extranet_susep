@@ -21,7 +21,7 @@
                                 <h2>Destaques</h2>
                             </div>
                             <div>
-                                <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => '', 'menu_class' => 'destaques-carrousel')) ?>
+                                <?php wp_nav_menu(array('theme_location' => 'destaque-menu', 'container' => '', 'menu_class' => 'destaques-carrousel')) ?>
                             </div>
                         </div>
                         <div class="visualClear">

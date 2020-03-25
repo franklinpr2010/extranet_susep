@@ -14,8 +14,7 @@
                 </div>
             </div>
             <div class="links-destaque-institucional">
-                <ul>
-                </ul>
+
             </div>
         </div>
     </div>
@@ -24,20 +23,7 @@
 <div class="navigation-wrapper">
     <div class="navigation-content">
         <nav id="main-navigation" class="navigation-cell">
-            <ul class="list-navigation">
-                <li id="portaltab-composicao" class="plain dropdown-submenu"><a href="https://www.gov.br/casacivil/pt-br/composicao" title="" class="plain">Composição</a>
-                    <ul class="submenu">
-                        <li>
-                            <a href="https://www.gov.br/casacivil/pt-br/composicao/ministro" title="conteudo do menu acompanhe a casa civil" class="state-published">
-            Ministro
-        </a>
-                        </li>
-                        <li>
-                            <a href="https://www.gov.br/casacivil/pt-br/composicao/gabinete-do-ministro" title="" class="state-published">
-            Gabinete do Ministro
-        </a>
-                        </li>
-                    </ul>
+        <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container' => false, 'menu_class' => 'list-navigation', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
         </nav>
     </div>
 </div>

@@ -5,7 +5,7 @@
 
             <div class="tile tile-default" id="babed626-3830-4709-a93d-408f809006d2">
 
-                <div class="agenda-tile tile-content" id="agenda-babed626-3830-4709-a93d-408f809006d2" data-url="http://127.0.0.1/casacdivil_files">
+                <div class="agenda-tile tile-content" id="agenda-babed626-3830-4709-a93d-408f809006d2">
 
                     <div class="agenda-wrapper">
 
