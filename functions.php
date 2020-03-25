@@ -132,10 +132,10 @@ function extranet_sidebars() {
         register_sidebar(array(
             'name'=>  'Imagem-Principal',
             'id' => 'imagem-principal',
-            'height' => '1071',
-            'class'=>'left',
-            'width'=>'1607'
-        )
+            'before_widget' => '',
+            'after_widget'  => '',
+            'style' => 'display:none',
+            )
         );
 
         register_sidebar(array(
@@ -152,13 +152,13 @@ function extranet_sidebars() {
 }
 
 
+
+
 /**
  * Adicionando imagem aos post-thumbnails, no caso dos posts
  */
 add_theme_support( 'post-thumbnails', array( 'page', 'post' ) );
 add_theme_support( 'automatic-feed-links' );
-
-
 add_theme_support('nav-menus');
 
 /*
