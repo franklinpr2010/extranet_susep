@@ -4,8 +4,7 @@
 
 <!--Head-->
 <?php include 'head.php'; ?>
-<body class="default-header-template portal-institucional cover-layout-layout-vazio template-view portaltype-collective-cover-content site-pt-br section-pagina-inicial userrole-anonymous" data-base-url="https://www.gov.br/casacivil/pt-br/pagina-inicial" data-portal-url="https://www.gov.br/casacivil" dir="ltr">
-
+<body onload="functionUtils()" class="default-header-template portal-institucional cover-layout-layout-vazio template-view portaltype-collective-cover-content site-pt-br section-pagina-inicial userrole-anonymous" data-base-url="https://www.gov.br/casacivil/pt-br/pagina-inicial" data-portal-url="https://www.gov.br/casacivil" dir="ltr">
 
      <!-- Google Tag Manager (noscript) -->
     <!--Tag Manager-->
@@ -17,3 +16,20 @@
     <!--Scripts JavaScript-->
     <?php wp_footer(); ?>
 </html>
+
+<script>
+    function functionUtils() {
+        var elementImg = GetElementInsideContainer('div-imagem-principal', 'IMG');
+        elementImg.removeAttribute('style'); 
+    }
+    function GetElementInsideContainer(containerID, tagName) {
+        var elm = {};
+        var elms = document.getElementById(containerID).getElementsByTagName("*");
+        for (var i = 0; i < elms.length; i++) {
+            if(elms[i].tagName === 'IMG') {
+                elm = elms[i];
+            }
+        }
+        return elm;
+     }
+</script>

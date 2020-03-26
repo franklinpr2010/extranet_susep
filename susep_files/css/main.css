@@ -672,3 +672,37 @@ margin-top:50px;
     justify-content: space-evenly;
 }
 
+.destaques-carrousel {
+	list-style-type:none;
+	margin: 0 auto;
+	max-width: 900px;
+	height: 100px;
+	position: relative;
+}
+
+#destaque-menu{
+	max-width: 960px;
+	background: gray;
+	margin: 0 auto;
+	text-align: center;
+	padding: 15px 10px;
+	box-sizing: border-box;
+  }
+  #destaque-menu li{
+	display: inline-block;
+	margin: 10px 15px;
+	position: relative;
+  }
+  #destaque-menu ul{
+	display: none;
+  }
+  #destaque-menu li:hover ul{
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 150px;
+	text-align: left;
+	padding: 0;
+	background: white;
+  }
+

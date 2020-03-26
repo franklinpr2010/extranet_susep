@@ -16,11 +16,11 @@ $args = array(
                 //Construir quatro categorias no wordpress para cada sidebar
                 if (in_category('thumbnails-destaque')):
                 ?>
-                <div class="col-xs-6 col-md-4" data-panel="">
+                <div class="column col-md-4 tile-default" data-panel="">
                     <div class="tile tile-default" id="a519f127-1bae-493b-830d-3b34247f4acc">
                         <div class="nitf-basic-tile tile-content">
-                            <a href="<?php the_permalink(); ?>" title="">
-                                    <img src="<?php the_post_thumbnail_url()?>" width="370" height="277" class="left" alt="Programa Momento Acolhida: uma conexão Brasil-Venezuela">
+                            <a href="<?php the_permalink(); ?>" title="" class="imag">
+                                    <img src="<?php the_post_thumbnail_url()?>"  class="left" alt="Programa Momento Acolhida: uma conexão Brasil-Venezuela">
                                 </a>
                             <h2><a href="<?php the_permalink(); ?>"><?php echo get_the_title()?></a></h2>
                             <div class="visualClear">
