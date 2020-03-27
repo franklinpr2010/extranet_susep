@@ -4,13 +4,9 @@
             <div class="tile fio-separador image-position-right linha-recuada" id="ff3b9136-ceff-4ec0-94de-a40662398989">
                 <a class="imag" href="https://www.gov.br/casacivil/pt-br/assuntos/noticias/2020/marco/governo-federal-lanca-agenda-brasil-canal-direto-com-o-cidadao" title="">
                     <div id="div-imagem-principal">
-<<<<<<< HEAD
-                        <!--<img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg" width="1607" height="1071" class="left" alt="Governo Federal lança Agenda + Brasil: canal direto com o cidadão">-->
-                        <?php 
-=======
+
                     <!--<img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg" width="1607" height="1071" class="left" alt="Governo Federal lança Agenda + Brasil: canal direto com o cidadão">-->
                     <?php 
->>>>>>> 8a181b8e73864829ca91ec63195d8248039134a1
                     if(is_active_sidebar('imagem-principal')) {
                     dynamic_sidebar('imagem-principal');
                     }

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <div id="portal-breadcrumbs">
 
 <span id="breadcrumbs-you-are-here">Você está aqui:</span>
@@ -8,7 +7,6 @@
 </span>
 </div>
 <div class="video"></div>
->>>>>>> 8a181b8e73864829ca91ec63195d8248039134a1
 <div id="wrapper">
     <!-- Columns -->
     <div id="main">
