@@ -15,15 +15,20 @@
                 <div class="nitf-basic-tile tile-content">
                     <?php 
             if(is_active_sidebar('banner')) {
-            dynamic_sidebar('banner');
+                dynamic_sidebar('banner');
             }
             ?>
-                        <div class="assuntos-em-alta" style="position:relative">
-                            <div class="tile-header" style="position:relative;width:215px;margin-right:auto;margin-left:auto">
-                                <h2>Destaques</h2>
+            <?php
+            if ( has_nav_menu( 'destaque-menu' ) ) { ?>
+             <div class="assuntos-em-alta" style="position:relative">
+                            <div  style="position:relative;width:215px;margin-right:auto;margin-left:auto">
+                                <h2  style="text-align: center;text-transform:uppercase;font-size:1.6rem;font-weight:500;color:#fff;margin:0;padding:0 16px;position:relative">DESTAQUES</h2>
                             </div>
+                            <br/>
                             <?php wp_nav_menu(array('theme_location' => 'destaque-menu', 'menu_class' => 'destaques-carrousel', 'items_wrap' => '<div style="text-align: center;"><ul id="destaques-carrousel" style="margin: 0 auto;">%3$s</ul></div>')) ?>
-                        </div>
+             </div>
+            <?php } ?>
+                       
                 </div>
                 <div class="visualClear">
                     <!-- -->

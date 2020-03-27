@@ -1,7 +1,7 @@
 <?php
 $args = array(
     'posts_per_page' => 8,
-    'category__in' => array(  3,4,5  )
+    'category__in' => array(  4  )
 );
  //permite uma cópia do loop wordpress padrão para modificar como quiser ( Posts, Categorias )
  $work = new WP_Query( $args );

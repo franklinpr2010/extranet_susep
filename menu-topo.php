@@ -21,7 +21,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.gov.br/casacivil/pt-br#" class="link-contraste">
+                        <a href="#" class="link-contraste">
                             <i class="fas fa-adjust"></i>
                         </a>
                     </li>

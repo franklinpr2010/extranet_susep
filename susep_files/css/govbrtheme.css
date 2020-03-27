@@ -3313,7 +3313,7 @@ header#main-header .header-wrapper #logo{
     flex-grow:1;
     font-size:26px;
     font-weight:400;
-    margin:0;
+    margin:0 auto;
     background:transparent url(https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/++theme++padrao_govbr/img/govbr-colorido-b.png) no-repeat 0 100%/140px 50px;
     height:50px;
     min-width:150px;
@@ -3323,13 +3323,13 @@ header#main-header .header-wrapper #logo{
 }
 @media only screen and (max-width:767px){
     header#main-header .header-wrapper #logo{
-        position:static;
+        position:fixed;
         background-position:center 20px;
         background-size:63px 22px;
-        margin:0;
+        margin:0 auto;
         width:100%;
         text-align:center;
-        z-index:0
+        z-index:210
     }
 }
 header#main-header .header-wrapper #logo #portal-title,header#main-header .header-wrapper #logo h1{
@@ -12503,3 +12503,7 @@ html body.contraste #main-navigation .submenu .submenu{
             border-radius: 5px;
             height: 8px;
         }
+
+
+
+ 

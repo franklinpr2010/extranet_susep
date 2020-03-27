@@ -1,4 +1,15 @@
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161928965-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161928965-1');
+    </script>
+
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!--CSS da aplicação-->
     <?php wp_head(); ?>

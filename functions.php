@@ -279,6 +279,18 @@ class BootstrapBasicMyWalkerNavMenu extends Walker_Nav_Menu
     
     }
 
+add_action('wp_head','wpklik_add_googleanalytics'); 
+function wpklik_add_googleanalytics() { ?> 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161928965-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); 
+    gtag('config', 'UA-161928965-1');
+</script> 
+<?php }
+
 
 
 
