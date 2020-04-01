@@ -8,6 +8,7 @@ function load_scripts() {
     wp_enqueue_style('responsive', get_template_directory_uri() . '/susep_files/css/responsive.css');
     wp_enqueue_style('animate-min', get_template_directory_uri() . '/susep_files/css/animate.min.css');
     wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.10.2/css/all.css');
+    //wp_enqueue_style('mds', '/susep_files/css/mds-min.css');
     //wp_enqueue_style('all-css', '/susep_files/css/all.css');
     wp_enqueue_style('sunburst-theme', 'https://www.gov.br/casacivil/portal_css/Sunburst%20Theme/IEFixes-cachekey-9e6170e03a0cfc22bb302f2b78303338.css');
     //Arquivos do template da susep
@@ -41,11 +42,6 @@ function load_scripts() {
     //wp_enqueue_style('service-style',get_template_directory_uri() .  '/susep_files/css/indicadores/service-style.css');
     //wp_enqueue_style('style-style', get_template_directory_uri() . '/susep_files/css/indicadores/style.css');
     //wp_enqueue_style('font2', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr');
-   
-
-
-
-    
 
     //wp_register_script( 'jquery-two', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
      //array(), '3.4.1',  true);
@@ -118,6 +114,7 @@ add_action( 'widgets_init', 'extranet_sidebars' );
  * Adicionando imagens e títulos dinâmicos
  */
 function extranet_sidebars() {
+   
         register_sidebar(array(
                 'name'=>  'Título Principal',
                 'id' => 'banner',
@@ -135,6 +132,7 @@ function extranet_sidebars() {
             'before_widget' => '',
             'after_widget'  => '',
             'style' => 'display:none',
+            'class' => 'img-fluid'
             )
         );
 
@@ -157,15 +155,18 @@ function extranet_sidebars() {
 /**
  * Adicionando imagem aos post-thumbnails, no caso dos posts
  */
-add_theme_support( 'post-thumbnails', array( 'page', 'post' ) );
+add_theme_support( 'post-thumbnails');
 add_theme_support( 'automatic-feed-links' );
 add_theme_support('nav-menus');
+
+
 
 /*
 Função walker para o css
 */
 class BootstrapBasicMyWalkerNavMenu extends Walker_Nav_Menu
     {
+        
         //Overwrite display_element function to add has_children attribute. Not needed in >= Wordpress 3.4
         /**
          * @link https://gist.github.com/duanecilliers/1817371 copy from this url
@@ -248,10 +249,6 @@ class BootstrapBasicMyWalkerNavMenu extends Walker_Nav_Menu
             } else {
                 $output .= $indent . '<li' . $id . $value . $classes . $li_attributes . '>';
             }
-            
-           
-            
-            
             //Add attributes to link element.
             $attributes = !empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
             $attributes .=!empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
@@ -278,6 +275,8 @@ class BootstrapBasicMyWalkerNavMenu extends Walker_Nav_Menu
     
     
     }
+//log
+// error_log($current_url);
 
 add_action('wp_head','wpklik_add_googleanalytics'); 
 function wpklik_add_googleanalytics() { ?> 
@@ -290,6 +289,15 @@ function wpklik_add_googleanalytics() { ?>
     gtag('config', 'UA-161928965-1');
 </script> 
 <?php }
+
+
+
+
+
+
+
+
+
 
 
 

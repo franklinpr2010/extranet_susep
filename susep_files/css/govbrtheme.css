@@ -1147,13 +1147,7 @@ body.userrole-authenticated header#main-header{
     width:25px;
     height:28px
 }
-@media only screen and (max-width:767px){
-    header#main-header .menu-institucional{
-        -ms-flex-preferred-size:100%;
-        flex-basis:100%;
-        text-align:center
-    }
-}
+
 header#main-header .heading{
     display:-webkit-box;
     display:-ms-flexbox;
@@ -3329,9 +3323,20 @@ header#main-header .header-wrapper #logo{
         margin:0 auto;
         width:100%;
         text-align:center;
-        z-index:210
+        z-index:0;
     }
 }
+
+@media only screen and (max-width:767px){
+    header#main-header .header-wrapper .menu-institucional{
+        -ms-flex-preferred-size:2%;
+        flex-basis:100%;
+        text-align:center;
+        z-index:1;
+    }
+}
+
+
 header#main-header .header-wrapper #logo #portal-title,header#main-header .header-wrapper #logo h1{
     display:inline;
     font-size:inherit;

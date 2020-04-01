@@ -13,11 +13,22 @@
     <?php include 'header.php'; ?>
     <!--Header-->
     <?php include 'body.php'; ?>
+    <?php include 'libras.php'; ?>
+
+    <?php include 'footer.php'; ?>
+    <div id="viewlet-below-content">
+        <div class="voltar-topo">
+            <a href="https://www.gov.br/casacivil/pt-br#wrapper">Voltar ao topo</a>
+        </div>
+        <div class="texto-copyright">
+            <span omit-tag="">Todo o conteúdo deste site está publicado sob a licença</span> <a rel="license" href="https://creativecommons.org/licenses/by-nd/3.0/deed.pt_BR">Creative Commons Atribuição-SemDerivações 3.0 Não Adaptada</a>.
+        </div>
+
+    </div>
     <!--Scripts JavaScript-->
     <?php wp_footer(); ?>
-</html>
 
-<script>
+    <script>
     function functionUtils() {
         var elementImg = GetElementInsideContainer('div-imagem-principal', 'IMG');
         elementImg.removeAttribute('style'); 
@@ -32,4 +43,18 @@
         }
         return elm;
      }
+
+    
+        jQuery(function($) {
+            if (typeof($.datepicker) != "undefined") {
+                $.datepicker.setDefaults(
+                    jQuery.extend($.datepicker.regional['pt-BR'], {
+                        dateFormat: 'dd/mm/yy'
+                    }));
+            }
+        });
+
 </script>
+</body>
+</html>
+
