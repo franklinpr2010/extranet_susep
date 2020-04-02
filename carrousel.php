@@ -1,24 +1,40 @@
+
+<!--Head-->
+<?php include 'head.php'; ?>
+
+<?php
+
+$args = array(
+    'post_type' => 'page',
+    'pagename' => 'pagina-inicial'
+);
+$the_query = new WP_Query($args)
+//se tiver posts
+?>
+
+
 <div class="row linha-destaquehome topo-com-degrade">
     <div class="row-content">
         <div class="column col-md-12 tile-default " data-panel="">
             <div class="tile fio-separador image-position-right linha-recuada" id="ff3b9136-ceff-4ec0-94de-a40662398989">
                 <a class="imag" href="https://www.gov.br/casacivil/pt-br/assuntos/noticias/2020/marco/governo-federal-lanca-agenda-brasil-canal-direto-com-o-cidadao" title="">
                     <div id="div-imagem-principal">
-
-                    <!--<img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg" width="1607" height="1071" class="left" alt="Governo Federal lança Agenda + Brasil: canal direto com o cidadão">-->
-                    <?php 
-                    if(is_active_sidebar('imagem-principal')) {
-                    dynamic_sidebar('imagem-principal');
-                    }
-                    ?>
+                        <?php while( $the_query->have_posts()) :  $the_query->the_post(); ?>
+                            <img src="<?php the_post_thumbnail_url()?>" class="img-fluid" alt="<?php the_title() ?>">
+                        <?php endwhile; ?>
                     </div>
                 </a>
                 <div class="nitf-basic-tile tile-content">
-                    <?php 
-            if(is_active_sidebar('banner')) {
-                dynamic_sidebar('banner');
-            }
-            ?>
+                    <div class="widget-wrapper">
+                                <?php while( $the_query->have_posts()) :  $the_query->the_post(); ?>
+                                    <h2>
+                                        <a href="<?php  the_field('link_do_titulo_da_logo_da_imagem_principal') ?>">
+                                            <?php the_field('titulo_da_imagem') ?>
+                                            </a>
+                                    </h2>
+                                <?php endwhile; ?>
+
+                    </div>
             <?php
             if ( has_nav_menu( 'destaque-menu' ) ) { ?>
              <div class="assuntos-em-alta" style="position:relative">

@@ -32,17 +32,36 @@
                         <img src="<?php the_post_thumbnail_url()?>" width="370" height="246" class="left" alt="<?php the_title() ?>">
                     </a>
                     <p class="tile-subtitle"><?php the_field('subtitulo') ?>
-                        <div class="social-links"><a title="Facebook" href="http://www.facebook.com/sharer.php?u=https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria/2020/03/infraestrutura-estabelece-malha-logistica-para-garantir-abastecimento-nacional"><i class="fab fa-facebook-f"></i></a><a title="Twitter" href="https://twitter.com/share?text=Infraestrutura%20estabece%20log%C3%ADstica%20para%20garantir%20abastecimento&amp;url=https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria/2020/03/infraestrutura-estabelece-malha-logistica-para-garantir-abastecimento-nacional"><i class="fab fa-twitter"></i></a><a class="link-clipboard" onclick="event.preventDefault()" href="https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria/2020/03/infraestrutura-estabelece-malha-logistica-para-garantir-abastecimento-nacional" title="Copiar para área de transferência"><i class="fas fa-link"></i></a><a class="toggle-social-links"><i class="fas fa-share-alt"></i><i class="fas fa-times"></i></a></div>
+                        <div class="social-links">
+                        <a title="Facebook" href="http://www.facebook.com/sharer.php?u=<?php the_permalink()?>"><i class="fab fa-facebook-f"></i></a>
+                        <a title="Twitter" href="https://twitter.com/share?text=<?php the_title() ?>&amp;url=<?php the_permalink()?>"><i class="fab fa-twitter"></i></a>
+                        <a class="link-clipboard" onclick="event.preventDefault()" href="<?php the_permalink()?>" title="Copiar para área de transferência"><i class="fas fa-link"></i></a><a class="toggle-social-links"><i class="fas fa-share-alt"></i><i class="fas fa-times"></i></a></div>
                     </p>
                     <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                     <div class="visualClear">
                         <!-- -->
                     </div>
+                    
                 </div>
             </div>
         </div>
         <?php endwhile; ?>
         <?php endif; ?>  
-
     </div>
 </div>
+<script>
+  var clipboard = new ClipboardJS('.link-clipboard');
+
+clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+</script>
