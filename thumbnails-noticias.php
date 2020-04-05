@@ -4,30 +4,20 @@
 
 <div class="row">
     <div class="row-content">
-        
-
         <?php
-
             $args = array(
                 'post_type' => 'noticias'
             );
             $image = get_field('imagem_noticia');
             $the_query = new WP_Query($args)
             //se tiver posts
-        
         ?>
-
         <?php
-
         if( $the_query->have_posts() ): 
                 while($the_query->have_posts()) : $the_query->the_post(); ?>
-
         <div class="col-md-4 tile-default" data-panel="">
-
             <div class="tile foto-sobreposta" id="a777c30b-c4a9-4ca6-9a44-540a6b2bea35">
-
                 <div class="nitf-basic-tile tile-content">
-
                     <a class="imag" href="<?php the_permalink() ?>" title="<?php the_title() ?>">
                         <img src="<?php the_post_thumbnail_url()?>" width="370" height="246" class="left" alt="<?php the_title() ?>">
                     </a>

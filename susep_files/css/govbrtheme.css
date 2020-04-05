@@ -3680,7 +3680,52 @@ header#main-header .header-accessibility{
         width:89%;
         color:#fff
     }
+
+    #breadcrumb{
+        margin-left: 210px;
+        margin-right: 200px;
+        margin-top: 40px;
+    }
 }
+@media only screen and (max-width:500px){
+   /*# sourceMappingURL=breadcrumb.css.map */
+  .div-imagem-post img {
+    max-width: 100%;
+    max-height: 100%;
+ }
+
+
+}
+
+
+@media only screen and (max-width:900px){
+    #breadcrumb{
+        margin: 0 auto;
+    }
+
+    .div-imagem-post img {
+        max-width: 100%;
+        max-height: 100%;
+     }
+}
+
+
+
+
+
+@media only screen and (min-width:900px){
+    /*# sourceMappingURL=breadcrumb.css.map */
+   .div-imagem-post {
+     width: 100%; 
+     margin: 0 auto;
+     text-align: center;
+  }
+ }
+
+/*
+*Pertinente a imagem do post
+*/
+
 @media only screen and (max-width:575px){
     #portal-searchbox .searchField{
         height:54px
@@ -3866,7 +3911,7 @@ footer.portal-footer .govbr-logo{
     margin-bottom:52px;
 
 
-    background-image:url(/wp-content/themes/extranet_susep/susep_files/img/govbr.png);
+    background-image:url(https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/++theme++padrao_govbr/img/govbr.png);
     background-size:cover
 }
 footer.portal-footer .list-navigation{

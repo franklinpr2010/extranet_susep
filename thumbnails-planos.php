@@ -41,7 +41,7 @@ $args = array(
                                 endwhile;
                             else:    
                                     echo 'Não existem posts a serem mostrados';
-                            endif;
+                            endif; wp_reset_query();
                         ?>
                     </div>
                 </div>

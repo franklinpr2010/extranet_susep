@@ -14,8 +14,9 @@
         <a href="http://susep.gov.br" style="margin-left:200px"></a>
             <!--Menu Head-->
             <?php include 'menu-topo.php'; ?>
-            <?php include 'search.php'; ?>
+            <?php include 'componente-busca.php'; ?>
     </div>
     <?php include 'menu-navigator.php'; ?>
+  
 </header>
 

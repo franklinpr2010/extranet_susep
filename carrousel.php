@@ -44,7 +44,7 @@ $the_query = new WP_Query($args)
                             <br/>
                             <?php wp_nav_menu(array('theme_location' => 'destaque-menu', 'menu_class' => 'destaques-carrousel', 'items_wrap' => '<div style="text-align: center;"><ul id="destaques-carrousel" style="margin: 0 auto;">%3$s</ul></div>')) ?>
              </div>
-            <?php } ?>
+            <?php wp_reset_query(); } ?>
                        
                 </div>
                 <div class="visualClear">

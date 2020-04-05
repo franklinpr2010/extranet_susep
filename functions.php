@@ -8,6 +8,7 @@ function load_scripts() {
     wp_enqueue_style('responsive', get_template_directory_uri() . '/susep_files/css/responsive.css');
     wp_enqueue_style('animate-min', get_template_directory_uri() . '/susep_files/css/animate.min.css');
     wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.10.2/css/all.css');
+    wp_enqueue_style('animate-min', get_template_directory_uri() . '/susep_files/css/bulma.min.css');
     //wp_enqueue_style('mds', '/susep_files/css/mds-min.css');
     //wp_enqueue_style('all-css', '/susep_files/css/all.css');
     wp_enqueue_style('sunburst-theme', 'https://www.gov.br/casacivil/portal_css/Sunburst%20Theme/IEFixes-cachekey-9e6170e03a0cfc22bb302f2b78303338.css');
@@ -254,7 +255,7 @@ class BootstrapBasicMyWalkerNavMenu extends Walker_Nav_Menu
             $attributes .=!empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
             $attributes .=!empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
             $attributes .=!empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
-            $attributes .= (is_object($args) && $args->has_children) ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
+            $attributes .= (is_object($args) && $args->has_children) ? ' class="" data-toggle="dropdown"' : '';
     
             $item_output = (is_object($args)) ? $args->before : '';
             $item_output .= '<a' . $attributes . '>';
@@ -293,155 +294,187 @@ function wpklik_add_googleanalytics() { ?>
 
 // BREADCRUMBS  --------------------------------------------------------------------------------------------------------
 
-function pietergoosen_breadcrumbs() {
-    /* === OPTIONS === */
-$text['home']     = _x( 'Home', 'Home', 'pietergoosen' ); // text for the 'Home' link
-$text['category'] = __( 'Archive by Category "%s"', 'pietergoosen' );  // text for a category page
-$text['search']   = __( 'Search Results for "%s" Query', 'pietergoosen' ); // text for a search results page
-$text['tag']      = __( 'Posts Tagged "%s"', 'pietergoosen' );  // text for a tag page
-$text['author']   = __( 'Posts Posted by %s', 'pietergoosen' ); // text for an author page
-$text['404']      = __( 'Error 404', 'pietergoosen' );  // text for the 404 page
+// Breadcrumbs
+function custom_breadcrumbs() {
+    $breadcrums_id      = '';
+    $breadcrums_class   = '';
+    // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
+    $custom_taxonomy    = 'product_cat';
+    // Get the query & post information
+    global $post,$wp_query;
+    // Do not display on the homepage
+    if ( !is_front_page() ) {
+        echo '<nav class="Breadcrumb">';
+        // Build the breadcrums
+        echo '<ol id="' . $breadcrums_id . '">';
+        // Home page
+        echo '<li class="breadcrumb-item" style="display:inline"><a href="' . get_home_url() . '" title="' . $home_title . '"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
 
-$show_current   = 1; // 1 - show current post/page/category title in breadcrumbs, 0 - don't show
-$show_on_home   = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
-$show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show
-$show_title     = 1; // 1 - show the title for the links, 0 - don't show
-$delimiter      = ' &raquo; '; // delimiter between crumbs
-$before         = '<span class="current">'; // tag before the current crumb
-$after          = '</span>'; // tag after the current crumb
-/* === END OF OPTIONS === */
+        if ( is_archive() && !is_tax() && !is_category() && !is_tag() ) {
+ 
+            echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . post_type_archive_title($prefix, false) . '</strong></li>';
+              
+        } else if ( is_archive() && is_tax() && !is_category() && !is_tag() ) {
+              
+            // If post is a custom post type
+            $post_type = get_post_type();
+              
+            // If it is a custom post type display name and link
+            if($post_type != 'post') {
+                  
+                $post_type_object = get_post_type_object($post_type);
+                $post_type_archive = get_post_type_archive_link($post_type);
+              
+                echo '<li class="breadcrumb-item" style="display:inline"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
+                
+                
+            }
+              
+            $custom_tax_name = get_queried_object()->name;
+            echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . $custom_tax_name . '</strong></li>';
+              
+        } else if ( is_single() ) {
 
-global $post;
-$home_link    = home_url('/');
-$link_before  = '<span typeof="v:Breadcrumb">';
-$link_after   = '</span>';
-$link_attr    = ' rel="v:url" property="v:title"';
-$link         = $link_before . '<a' . $link_attr . ' href="%1$s">%2$s</a>' . $link_after;
-  if (isset($post)){
-      $parent_id    = $parent_id_2  = $post->post_parent;
-  }
-$frontpage_id = get_option('page_on_front');
-
-if (is_home() || is_front_page()) {
-
-      if ($show_on_home == 1) echo '<div class="breadcrumb"><a href="' . $home_link . '">' . $text['home'] . '</a></div>';
-
-  } else {
-
-   echo '<div class="">';
-   if ($show_home_link == 1) {
-       echo  '<a href="' . $home_link . '" rel="v:url" property="v:title">' . $text['home'] . '</a>';
-       if ($frontpage_id == 0 || $parent_id != $frontpage_id) echo $delimiter;
-   }
-
-   if ( is_category() ) {
-       $this_cat = get_category(get_query_var('cat'), false);
-       if ($this_cat->parent != 0) {
-           $cats = get_category_parents($this_cat->parent, TRUE, $delimiter);
-           if ($show_current == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
-           $cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats);
-           $cats = str_replace('</a>', '</a>' . $link_after, $cats);
-           if ($show_title == 0) $cats = preg_replace('/ title="(.*?)"/', '', $cats);
-           echo $cats;
-       }
-          if ($show_current == 1) echo $before . sprintf($text['category'], single_cat_title('', false)) . $after;
-
-    } elseif ( is_search() ) {
-        echo $before . sprintf($text['search'], get_search_query()) . $after;
-
-    } elseif ( is_day() ) {
-       echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y')) . $delimiter;
-       echo sprintf($link, get_month_link(get_the_time('Y'),get_the_time('m')), get_the_time('F')) . $delimiter;
-       echo $before . get_the_time('d') . $after;
-
-   } elseif ( is_month() ) {
-       echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y')) . $delimiter;
-       echo $before . get_the_time('F') . $after;
-
-    } elseif ( is_year() ) {
-        echo $before . get_the_time('Y') . $after;
-
-    } elseif ( is_single() && !is_attachment() ) {
-          if ( get_post_type() != 'post' ) {
-              $post_type = get_post_type_object(get_post_type());
-              $slug = $post_type->rewrite;
-              printf($link, $home_link . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
-              if ($show_current == 1) echo $delimiter . $before . get_the_title() . $after;
-          } else {
-              $cat = get_the_category(); $cat = $cat[0];
-              $cats = get_category_parents($cat, TRUE, $delimiter);
-              if ($show_current == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
-              $cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats);
-              $cats = str_replace('</a>', '</a>' . $link_after, $cats);
-              if ($show_title == 0) $cats = preg_replace('/ title="(.*?)"/', '', $cats);
-              echo $cats;
-              if ($show_current == 1) echo $before . get_the_title() . $after;
-          }
-
-   } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
-       $post_type = get_post_type_object(get_post_type());
-       echo $before . $post_type->labels->singular_name . $after;
-
-   } elseif ( is_attachment() ) {
-         $parent = get_post($parent_id);
-          $cat = get_the_category($parent->ID); $cat = $cat[0];
-          $cats = get_category_parents($cat, TRUE, $delimiter);
-          $cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats);
-          $cats = str_replace('</a>', '</a>' . $link_after, $cats);
-          if ($show_title == 0) $cats = preg_replace('/ title="(.*?)"/', '', $cats);
-          echo $cats;
-        printf($link, get_permalink($parent), $parent->post_title);
-        if ($show_current == 1) echo $delimiter . $before . get_the_title() . $after;
-
-      } elseif ( is_page() && !$parent_id ) {
-          if ($show_current == 1) echo $before . get_the_title() . $after;
-
-      } elseif ( is_page() && $parent_id ) {
-          if ($parent_id != $frontpage_id) {
-              $breadcrumbs = array();
-              while ($parent_id) {
-                  $page = get_page($parent_id);
-                  if ($parent_id != $frontpage_id) {
-                      $breadcrumbs[] = sprintf($link, get_permalink($page->ID), get_the_title($page->ID));
-                  }
-                  $parent_id = $page->post_parent;
-              }
-             $breadcrumbs = array_reverse($breadcrumbs);
-             for ($i = 0; $i < count($breadcrumbs); $i++) {
-                 echo $breadcrumbs[$i];
-                 if ($i != count($breadcrumbs)-1) echo $delimiter;
+        
+             // If it is a custom post type display name and link
+             if(get_post_type() != 'post') {
+                // If post is a custom post type
+                $post_type = get_post_type_object(get_post_type());
+                $post_type_object = get_post_type_object(get_post_type());
+                $slug = $post_type->rewrite;
+                $url_post_type = get_home_url() . '/' . $slug['slug'];
+                echo '<li class="breadcrumb-item" style="display:inline"><a class="bread-cat bread-custom-post-type" href="' . $url_post_type . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
              }
+            // Get post category info
+            $category = get_the_category();
+             
+            if(!empty($category)) {
+              
+                // Get last category post is in
+                $last_category = end(array_values($category));
+                  
+                // Get parent any categories and create array
+                $get_cat_parents = rtrim(get_category_parents($last_category->term_id, true, ','),',');
+                $cat_parents = explode(',',$get_cat_parents);
+                  
+                // Loop through parent categories and store in variable $cat_display
+                $cat_display = '';
+                foreach($cat_parents as $parents) {
+                    $cat_display .= '<li class="breadcrumb-item" style="display:inline">'.$parents.'</li>';
+                }
+            }
+            // If it's a custom post type within a custom taxonomy
+            $taxonomy_exists = taxonomy_exists($custom_taxonomy);
+            if(empty($last_category) && !empty($custom_taxonomy) && $taxonomy_exists) {
+                $taxonomy_terms = get_the_terms( $post->ID, $custom_taxonomy );
+                $cat_id         = $taxonomy_terms[0]->term_id;
+                $cat_nicename   = $taxonomy_terms[0]->slug;
+                $cat_link       = get_term_link($taxonomy_terms[0]->term_id, $custom_taxonomy);
+                $cat_name       = $taxonomy_terms[0]->name;
+               
+            }
+            // Check if the post is in a category
+            if(!empty($last_category)) {
+                echo $cat_display;
+                echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
+            // Else if post is in a custom taxonomy
+            } else if(!empty($cat_id)) {
+                echo '<li class="breadcrumb-item" style="display:inline"><a class="bread-cat bread-cat-' . $cat_id . ' bread-cat-' . $cat_nicename . '" href="' . $cat_link . '" title="' . $cat_name . '">' . $cat_name . '</a></li>';
+                echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
+            } else {
+                echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
+            }
+        } else if ( is_category() ) {
+               
+            // Category page
+            echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-current bread-cat">' . single_cat_title('', false) . '</strong></li>';
+               
+        } else if ( is_page() ) {
+            // Standard page
+            if( $post->post_parent ){
+                // If child page, get parents 
+                $anc = get_post_ancestors( $post->ID );
+                // Get parents in the right order
+                $anc = array_reverse($anc);
+                // Parent page loop
+                if ( !isset( $parents ) ) $parents = null;
+                foreach ( $anc as $ancestor ) {
+                    $parents .= '<li class="breadcrumb-item" style="display:inline"><a class="bread-parent bread-parent-' . $ancestor . '" href="' . get_permalink($ancestor) . '" title="' . get_the_title($ancestor) . '">' . get_the_title($ancestor) . '</a></li>';
+                }
+                // Display parent pages
+                echo $parents;
+                // Current page
+                echo '<li class="breadcrumb-item" style="display:inline"><strong title="' . get_the_title() . '"> ' . get_the_title() . '</strong></li>';
+            } else {
+                // Just display current page if not parents
+                echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-current bread-' . $post->ID . '"> ' . get_the_title() . '</strong></li>';
+            }
+        } else if ( is_tag() ) {
+            // Get tag information
+            $term_id        = get_query_var('tag_id');
+            $taxonomy       = 'post_tag';
+            $args           = 'include=' . $term_id;
+            $terms          = get_terms( $taxonomy, $args );
+            $get_term_id    = $terms[0]->term_id;
+            $get_term_slug  = $terms[0]->slug;
+            $get_term_name  = $terms[0]->name;
+            // Display the tag name
+            echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-current bread-tag-' . $get_term_id . ' bread-tag-' . $get_term_slug . '">' . $get_term_name . '</strong></li>';
+        } 
+         if ( is_month() ) {
+               
+            // Month Archive
+               
+            // Year link
+            echo '<li class="breadcrumb-item" style="display:inline"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</a></li>';
+            
+               
+            // Month display
+            echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-month bread-month-' . get_the_time('m') . '" title="' . get_the_time('M') . '">' . get_the_time('M') . ' Archives</strong></li>';
+               
+        } else if ( is_year() ) {
+               
+            // Display year archive
+            echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-current bread-current-' . get_the_time('Y') . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</strong></li>';
+               
+        } else if ( is_author() ) {
+               
+            // Auhor archive
+               
+            // Get the author information
+            global $author;
+            $userdata = get_userdata( $author );
+               
+            // Display author name
+            echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-current bread-current-' . $userdata->user_nicename . '" title="' . $userdata->display_name . '">' . 'Author: ' . $userdata->display_name . '</strong></li>';
+           
+        } else if ( get_query_var('paged') ) {
+               
+            // Paginated archives
+            echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'.__('Page') . ' ' . get_query_var('paged') . '</strong></li>';
+               
+        } else if ( is_search() ) {
+           
+            // Search results page
+            echo '<li class="breadcrumb-item" style="display:inline"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">Search results for: ' . get_search_query() . '</strong></li>';
+           
+        } elseif ( is_404() ) {
+               
+            // 404 page
+            echo '<li>' . 'Error 404' . '</li>';
         }
-       if ($show_current == 1) {
-           if ($show_home_link == 1 || ($parent_id_2 != 0 && $parent_id_2 != $frontpage_id)) echo $delimiter;
-           echo $before . get_the_title() . $after;
-       }
-
-    } elseif ( is_tag() ) {
-       echo $before . sprintf($text['tag'], single_tag_title('', false)) . $after;
-
-    } elseif ( is_author() ) {
-         global $author;
-         $userdata = get_userdata($author);
-        echo $before . sprintf($text['author'], $userdata->display_name) . $after;
-
-     } elseif ( is_404() ) {
-         echo $before . $text['404'] . $after;
-     }
-
-    if ( get_query_var('paged') ) {
-        if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-       echo __('&nbsp;&raquo;&nbsp; Page', 'pietergoosen') . ' ' . get_query_var('paged');
-       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
-   }
-
-     echo '</div><!-- .breadcrumbs -->';
-
-  }
+       
+        echo '</ol>';
+        echo '</nav>';
+           
+    }
+       
 }
 
-
-
+function reg_tag() {
+    register_taxonomy_for_object_type('post_tag', 'noticias');
+}
+add_action('init', 'reg_tag');
 
 
 

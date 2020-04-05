@@ -15,8 +15,8 @@
                     <?php include 'thumbnails-destaque.php'; ?>
                     <?php include 'thumbnails-cidadao.php'; ?>
                     <?php include 'thumbnails-planos.php'; ?>
-                    <?php include 'thumbnails-noticias.php'; ?>
                     <?php include 'reunioes-ata.php'; ?>
+                    <?php include 'thumbnails-noticias.php'; ?>
                     <?php include 'thumbnails-atendimento.php'; ?>           
                 </div>
         </main>
