@@ -5,11 +5,11 @@
 <?php include 'head.php'; ?>
     <!--configuração da página inicial -->
 
-        <?php while( have_posts()) :  the_post(); ?>
+        <?php while( have_posts()) :  the_post() ?>
             <title>
                 <?php the_title(); ?>
             </title>
-        <?php endwhile; ?>
+        <?php endwhile; wp_reset_query();?>
 
                 <body onload="functionUtils()" class="default-header-template portal-institucional cover-layout-layout-vazio template-view portaltype-collective-cover-content site-pt-br section-pagina-inicial userrole-anonymous" data-base-url="https://www.gov.br/casacivil/pt-br/pagina-inicial" data-portal-url="https://www.gov.br/casacivil" dir="ltr">
 

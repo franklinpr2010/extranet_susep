@@ -5,25 +5,17 @@
         <div class="govbr-logo"></div>
         <!--<div class="colunas-rodape">
     <div class="coluna-menu">-->
-        <?php wp_nav_menu(array('theme_location' => 'footer-menu', 'container' => false, 'menu_class' => 'list-navigation', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
+       
         <!--</div>
   </div>-->
 
         <div class="redes-e-logos">
             <div class="redes-sociais">
                 <h3>Redes sociais</h3>
-                <ul class="portal-redes">
+                <ul class="">
 
-                    <li class="portalredes-twitter portalredes-item">
-                        <a href="https://www.twitter.com/casacivilbr">Twitter</a>
-                    </li>
-
-                    <li class="portalredes-soundcloud portalredes-item">
-                        <a href="https://soundcloud.com/casacivil">SoundCloud</a>
-                    </li>
-
-                    <li class="portalredes-instagram portalredes-item">
-                        <a href="https://www.instagram.com/casacivilbr">Instagram</a>
+                    <li class="">
+                        <a href="https://www.linkedin.com/company/susep"><i class="fab fa-linkedin-in"></i></a>
                     </li>
 
                 </ul>

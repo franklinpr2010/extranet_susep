@@ -4,23 +4,16 @@
 <!--Head-->
 <?php include 'head.php'; ?>
     <!--configuração da página inicial -->
-    <?php 
-            if($_GET['SearchableText'] && !empty($_GET['SearchableText'])) {
-                $text = $_GET['SearchableText'];
-            }
-
-            $args = array(
-                'posts_per_page' => 100,
-                's' => $text
-            );
-
-            $query = new WP_Query($args);
+    <?php
+        
+           
+            //se tiver posts
     ?>
-        <?php while( have_posts()) :  the_post(); ?>
+        <?php while( have_posts()) : the_post(); ?>
             <title>
                 <?php the_title(); ?>
             </title>
-            <?php endwhile; ?>
+            <?php endwhile;  wp_reset_query();?>
 
                 <body class="default-header-template portal-institucional cover-layout-layout-vazio template-view portaltype-collective-cover-content site-pt-br section-pagina-inicial userrole-anonymous" data-base-url="https://www.gov.br/casacivil/pt-br/pagina-inicial" data-portal-url="https://www.gov.br/casacivil" dir="ltr">
 
@@ -48,17 +41,34 @@
                                                             <h1 property="rnews:headline"  class="documentFirstHeading"><?php the_title() ?></h1>
                                                             </div>
                                                             <div style="margin-top:20px">
-                                                            <h3><?php  $count = $query->post_count; echo $count . ' '; wp_reset_query(); ?> Resultado(s)</h3>
+                                                            <h3><?php  $count = $the_query->post_count; echo $count . ' '; wp_reset_query(); ?> Resultado(s)</h3>
                                                             </div>
                                                         </div>    
                                                         <div div="resultado" class="columns is-desktop is-mobile">
+                                                        <?php
+                                                                    $args = array(
+                                                                        'post_type' => 'noticias',
+                                                                        'orderby' => 'date',
+                                                                        'order'   => 'DESC'
+                                                                    );
+                                                                    $image = get_field('imagem_noticia');
+                                                                    $the_query = new WP_Query($args)
+                                                                    //se tiver posts
+                                                            ?>
                                                                             
                                                                            <?php
-                                                                                    while( $query -> have_posts()) :  $query -> the_post(); ?>
+                                                                                    while( $the_query -> have_posts()) :  $the_query -> the_post(); ?>
                                                                                     <hr/>
+                                                                                    <div class="tileImage">
+                                                                                        <a href="<?php the_permalink() ?>">
+                                                                                        <img src="<?php the_post_thumbnail_url()?>" height="85" width="128" class="tileImage">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    
                                                                                     <div id="titulo" class="column  is-full" style="margin: 15px">
-                                                                                        <h5><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
-                                    
+                                                                                            <span class="subtitle"><?php the_field('subtitulo') ?></span>
+                                                                                            <h5><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
+                                                                                        
                                                                                     </div>
                                                                                     <div id="resumo" class="column  is-full">
                                                                                         <?php echo get_the_excerpt();?>	
@@ -67,8 +77,9 @@
                                                                                         <div id="category"><span><?php the_tags() ?></div>
                                                                                     </div>
                                                                                     <div id="data" class="column  is-full">
-                                                                                        <?php the_date() ?>
+                                                                                    <?php echo get_the_date(); ?>
                                                                                     </div>
+                                                                                   
                                                                                     
 
                                                                                 <?php endwhile; wp_reset_query();?>

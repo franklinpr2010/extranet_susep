@@ -2,22 +2,13 @@
 <div class="header-accessibility">    
                 <!--Menu do topo-->
                 <ul>
-                     <li>
-                        <a href="https://www.gov.br/pt-br/orgaos-do-governo">Órgãos do Governo</a>
-                    </li>
                     <li>
-                        <a href="http://www.acessoainformacao.gov.br/">Acesso à Informação</a>
-                    </li>
-                    <li>
-                        <a href="http://www4.planalto.gov.br/legislacao">Legislação</a>
-                    </li>
-                    <li>
-                        <a href="https://www.gov.br/accessibility-info">Acessibilidade</a>
+                        <a class="link-acesso" href="https://www.gov.br/accessibility-info">Site Antigo</a>
                     </li>
     
                     <li>
-                        <a href="http://solicitacao.servicos.gov.br/" class="link-acesso">
-                            <i class="fas fa-user"></i> Acesso GOV.BR
+                        <a href="https://www.linkedin.com/company/susep">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </li>
                     <li>

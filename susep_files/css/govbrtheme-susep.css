@@ -224,17 +224,17 @@
     }
 }
 .portaltype-collective-cover-content .row.linha-destacada,.portaltype-collective-cover-content .row.linha-destacada-escura,.portaltype-collective-cover-content .row.linha-destacada-transparente,.portaltype-collective-cover-content .row.linha-discreta{
-    padding-top:56px;
+  
     padding-bottom:20px;
-    margin-bottom:36px
+    
 }
 .portaltype-collective-cover-content .row.linha-destacada-escura:last-of-type,.portaltype-collective-cover-content .row.linha-destacada-transparente:last-of-type,.portaltype-collective-cover-content .row.linha-destacada:last-of-type,.portaltype-collective-cover-content .row.linha-discreta:last-of-type{
     margin-bottom:0
 }
 .portaltype-collective-cover-content .tile-default.row.linha-destacada,.portaltype-collective-cover-content .tile-default.row.linha-destacada-escura,.portaltype-collective-cover-content .tile-default.row.linha-destacada-transparente,.portaltype-collective-cover-content .tile-default.row.linha-discreta{
-    padding-top:56px;
-    padding-bottom:20px;
-    margin-bottom:36px
+    
+    padding-bottom:0px;
+
 }
 @media only screen and (max-width:575px){
     .portaltype-collective-cover-content .row.linha-destacada,.portaltype-collective-cover-content .row.linha-destacada-escura,.portaltype-collective-cover-content .row.linha-destacada-transparente,.portaltype-collective-cover-content .row.linha-discreta,.portaltype-collective-cover-content .tile-default.row.linha-destacada,.portaltype-collective-cover-content .tile-default.row.linha-destacada-escura,.portaltype-collective-cover-content .tile-default.row.linha-destacada-transparente,.portaltype-collective-cover-content .tile-default.row.linha-discreta{
@@ -302,12 +302,14 @@
     flex-direction:column;
     -webkit-box-pack:end;
     -ms-flex-pack:end;
+    margin-bottom:100px;
     justify-content:flex-end;
     padding:0 0 24px;
     width:100%;
     height:100%;
     left:0;
-    bottom:0
+    bottom:0;
+    
 }
 @media only screen and (min-width:576px){
     .portaltype-collective-cover-content #content .linha-destaquehome .tile-content,.portaltype-collective-cover-content #content .linha-destaquetopo-adaptavel .tile-content,.portaltype-collective-cover-content #content .linha-destaquetopo .tile-content,.portaltype-collective-cover-content .brasil-highlightscarousel-tile .swiper-slide .carousel-information{
@@ -1000,7 +1002,7 @@ ul#skip-menu{
     }
 }
 body{
-    padding-top:150px
+    padding-top:0px
 }
 @media only screen and (max-width:767px){
     body{
@@ -1008,7 +1010,7 @@ body{
     }
 }
 body header#main-header{
-    position:fixed;
+    position: fixed;
     top:0;
     width:100%;
     z-index:4;
@@ -1016,100 +1018,37 @@ body header#main-header{
     -o-transition:top .2s ease-in-out;
     transition:top .2s ease-in-out
 }
-body header#main-header.nav-up{
-    top:-75px!important
-}
-@media only screen and (max-width:767px){
-    body header#main-header.nav-up{
-        top:0!important
-    }
-}
-body header#main-header.nav-down{
-    top:0!important
-}
-@media only screen and (min-width:768px){
-    [class*=portal-govbr] header#main-header.nav-up .header-wrapper .header-icons{
-        top:89px
-    }
-    [class*=portal-govbr] header#main-header.nav-up .header-wrapper .header-icons .ico-navegacao.open:before{
-        top:18px
-    }
-    [class*=portal-govbr] header#main-header.nav-up .header-wrapper #logo #portal-logo{
-        top:87px
-    }
-}
+
+
 body[data-browser-version-msg=true] header#main-header{
     top:150px
 }
-body[data-browser-version-msg=true] header#main-header.nav-up{
-    top:75px!important
-}
-body[data-browser-version-msg=true] header#main-header.nav-down{
-    top:150px!important
-}
+
+
 #portal-img{
     -webkit-transition:all .2s ease-in-out;
     -o-transition:all .2s ease-in-out;
     transition:all .2s ease-in-out
 }
-body header#main-header.nav-up #logo #portal-img{
-    background:transparent url(https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/++theme++padrao_govbr/img/govbr-colorido-b.png) no-repeat 0 70%/54px auto;
-    top:70px;
-    height:24px;
-    width:56px
-}
+
 #link-orgao-govbr{
     -webkit-transition:margin .2s ease-in-out;
     -o-transition:margin .2s ease-in-out;
     transition:margin .2s ease-in-out
 }
-body header#main-header.nav-up #logo #link-orgao-govbr{
-    margin-left:70px
-}
-@media only screen and (max-width:767px){
-    body header#main-header.nav-up #logo #link-orgao-govbr{
-        margin-left:0
-    }
-}
-body header#main-header.nav-up #logo #portal-description{
-    margin-top:20px
-}
-@media only screen and (max-width:767px){
-    body header#main-header.nav-up #logo #portal-description{
-        margin-top:-6px
-    }
-}
+
 .menu-institucional{
     -webkit-transition:padding .2s ease-in-out;
     -o-transition:padding .2s ease-in-out;
     transition:padding .2s ease-in-out
 }
-body header#main-header.nav-up .menu-institucional{
-    padding-top:16px
-}
-@media only screen and (max-width:767px){
-    body header#main-header.nav-up .menu-institucional{
-        padding-top:0
-    }
-}
+
 #portal-searchbox{
     -webkit-transition:top .2s ease-in-out;
     -o-transition:top .2s ease-in-out;
     transition:top .2s ease-in-out
 }
-body header#main-header.nav-up #portal-searchbox,body header#main-header.nav-up #portal-searchbox.open{
-    top:81px
-}
-@media only screen and (max-width:767px){
-    body header#main-header.nav-up #portal-searchbox,body header#main-header.nav-up #portal-searchbox.open{
-        top:0
-    }
-}
-@media only screen and (max-width:767px){
-    body header#main-header.nav-up #portal-searchbox.open{
-        top:45px
-    }
-}
+
 body.userrole-authenticated header#main-header{
     position:static
 }
@@ -1123,7 +1062,7 @@ body.userrole-authenticated header#main-header{
     display:block;
     min-height:28px
 }
-.portalredes-twitter{
+.portalredes-linkedin{
     background-image:url(https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/++theme++padrao_govbr/img/sprite.png);
     background-position:-99px -159px;
     width:27px;
@@ -2658,7 +2597,7 @@ body.userrole-authenticated header#main-header #beta,header#main-header #beta{
     right:-16px
 }
 .portaltype-collective-cover-content .servicos-em-destaque,.portaltype-orgao.template-view .servicos-em-destaque,.portaltype-servico .servicos-em-destaque,.template-listar_servicos_segmento .servicos-em-destaque{
-    padding:10px 0 0;
+    padding:30px;
     width:100%
 }
 .portaltype-collective-cover-content .servicos-em-destaque h1,.portaltype-orgao.template-view .servicos-em-destaque h1,.portaltype-servico .servicos-em-destaque h1,.template-listar_servicos_segmento .servicos-em-destaque h1{
@@ -3260,7 +3199,7 @@ header#main-header .header-wrapper{
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
-    min-height:75px;
+    min-height:70px;
     position:relative;
     -webkit-box-sizing:border-box;
     box-sizing:border-box
@@ -3301,16 +3240,16 @@ header#main-header .header-wrapper #link-orgao-govbr{
 header#main-header .header-wrapper #logo{
     position:absolute;
     z-index:1;
-    top:13px;
+    top:10px;
     -webkit-box-flex:1;
     -ms-flex-positive:1;
     flex-grow:1;
     font-size:26px;
     font-weight:400;
     margin:0 auto;
-    background:transparent url(https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/++theme++padrao_govbr/img/govbr-colorido-b.png) no-repeat 0 100%/140px 50px;
-    height:50px;
-    min-width:150px;
+    background:transparent url(http://13.58.92.31/wp-content/uploads/2020/04/logo_susep.png) no-repeat 0 100%/250px 50px;
+    height:70px;
+    min-width:400px;
     -webkit-transition:background-position .3s ease-in-out,background-size .3s ease-in-out;
     -o-transition:background-position .3s ease-in-out,background-size .3s ease-in-out;
     transition:background-position .3s ease-in-out,background-size .3s ease-in-out
@@ -3914,29 +3853,13 @@ footer.portal-footer .govbr-logo{
     background-image:url(https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/++theme++padrao_govbr/img/govbr.png);
     background-size:cover
 }
-footer.portal-footer .list-navigation{
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
-    -ms-flex-wrap:wrap;
-    flex-wrap:wrap;
-    margin-bottom:64px
-}
+
 @media only screen and (max-width:767px){
     footer.portal-footer .list-navigation{
         display:block
     }
 }
-footer.portal-footer .list-navigation li{
-    display:block;
-    -webkit-box-flex:1;
-    -ms-flex:1;
-    flex:1;
-    padding-right:8px;
-    padding-bottom:8px;
-    min-width:192px;
-    position:relative
-}
+
 @media only screen and (max-width:767px){
     footer.portal-footer .list-navigation li.dropdown-submenu:after{
         font-family:Font awesome\ 5 Free;
@@ -3951,6 +3874,24 @@ footer.portal-footer .list-navigation li{
     footer.portal-footer .list-navigation li.dropdown-submenu.opened:after{
         content:"\F077"
     }
+}
+footer.portal-footer .list-navigation{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    margin-bottom:64px
+}
+footer.portal-footer .list-navigation li{
+    display:block;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    padding-right:8px;
+    padding-bottom:8px;
+    min-width:192px;
+    position:relative
 }
 footer.portal-footer .list-navigation li a{
     display:block;
@@ -3972,6 +3913,9 @@ footer.portal-footer .list-navigation li li a{
     line-height:2.2rem;
     text-transform:none
 }
+footer.portal-footer .list-navigation li ul.submenu .submenu{
+    display:none!important
+}
 footer.portal-footer .list-navigation li ul.submenu{
     display:block;
     position:static
@@ -3985,9 +3929,7 @@ footer.portal-footer .list-navigation li ul.submenu{
         content:""
     }
 }
-footer.portal-footer .list-navigation li ul.submenu .submenu{
-    display:none!important
-}
+
 @media only screen and (max-width:767px){
     footer.portal-footer .list-navigation>li{
         padding-right:8px;
@@ -6210,6 +6152,13 @@ footer.portal-footer .redes-e-logos #footer-brasil a{
     background:-o-linear-gradient(top,transparent 50%,rgba(0,0,0,.9) 100%);
     background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.9))
 }
+
+.portaltype-collective-cover-content .row.linha-destaquehome.topo-com-degrade h2{
+    color:white;
+    
+}
+
+
 .portaltype-collective-cover-content .row.linha-destaquetopo-adaptavel .social-links{
     display:none
 }
@@ -6291,12 +6240,12 @@ footer.portal-footer .redes-e-logos #footer-brasil a{
 }
 .portaltype-collective-cover-content .row.linha-destaquehome{
     padding:0;
-    margin-bottom:36px
+    margin-bottom:0px
 }
 .portaltype-collective-cover-content .row.linha-destaquehome.topo-com-degrade .tile-content{
     background:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),to(rgba(0,0,0,.9)));
     background:-o-linear-gradient(top,transparent 50%,rgba(0,0,0,.9) 100%);
-    background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.9))
+    background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.9));
 }
 .portaltype-collective-cover-content .row.linha-destaquehome .social-links{
     display:none
@@ -6307,7 +6256,7 @@ footer.portal-footer .redes-e-logos #footer-brasil a{
 }
 .portaltype-collective-cover-content .row.linha-destaquehome .row-content .column{
     margin:0;
-    padding:0
+    padding:0;
 }
 .portaltype-collective-cover-content .row.linha-destaquehome .row-content .column .tile-default{
     padding:0
@@ -6320,8 +6269,13 @@ footer.portal-footer .redes-e-logos #footer-brasil a{
     -o-object-fit:cover;
     object-fit:cover;
     -o-object-position:center center;
-    object-position:center center
+    object-position:center center;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),to(rgba(0,0,0,.9)));
+    background:-o-linear-gradient(top,transparent 50%,rgba(0,0,0,.9) 100%);
+    background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.9));
+
 }
+
 @media only screen and (min-width:576px){
     .portaltype-collective-cover-content .row.linha-destaquehome .row-content img{
         height:calc(100vh - 95px)
@@ -6329,7 +6283,7 @@ footer.portal-footer .redes-e-logos #footer-brasil a{
 }
 @media only screen and (min-width:768px){
     .portaltype-collective-cover-content .row.linha-destaquehome .row-content img{
-        height:calc(100vh - 150px)
+        height:calc(100vh - 300px)
     }
 }
 .portaltype-collective-cover-content .row.linha-destaquehome.image-position-left img{
@@ -6373,7 +6327,6 @@ footer.portal-footer .redes-e-logos #footer-brasil a{
 }
 .portaltype-collective-cover-content .tile-default{
     width:100%;
-    padding-bottom:36px
 }
 .portaltype-collective-cover-content .row.tile-default,.portaltype-collective-cover-content .row .tile-default .tile-default{
     padding-bottom:0
@@ -6395,7 +6348,6 @@ footer.portal-footer .redes-e-logos #footer-brasil a{
     border-radius:41px;
     font-weight:600;
     float:none;
-    margin-top:36px
 }
 .portaltype-collective-cover-content .outstanding-link:hover{
     text-decoration:none;
@@ -7029,7 +6981,7 @@ body .ui-datepicker .ui-datepicker-current-day a{
     color:#fff
 }
 .portaltype-collective-cover-content #content .tile.foto-sobreposta,.portaltype-collective-cover-content #content .tile.foto-sobreposta .tile-content img{
-    height:375px
+    height:300px
 }
 .portaltype-collective-cover-content #content .tile.foto-sobreposta-pequena,.portaltype-collective-cover-content #content .tile.foto-sobreposta-pequena .tile-content img{
     height:272px
@@ -12556,4 +12508,73 @@ html body.contraste #main-navigation .submenu .submenu{
 
 
 
- 
+header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    margin-bottom:64px;
+    
+}
+header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation li{
+    display:block;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    padding-right:8px;
+    padding-bottom:8px;
+    min-width:192px;
+    position:relative;
+    
+}
+
+header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation .dropdown-submenu{
+    display:block;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    padding-right:8px;
+    padding-bottom:8px;
+    min-width:192px;
+    position:relative;
+    border-right: 1px solid black;
+    margin-right:15px;
+}
+
+
+header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation li a{
+    display:block;
+    min-height:48px;
+    margin-top:16px;
+    font-weight:700;
+    font-size:1.6rem;
+    color:black;
+    line-height:2.2rem;
+    text-transform:uppercase;
+    
+}
+
+header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation li li a:hover:link{
+    text-decoration: underline; 
+	color: #f00
+}
+
+header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation li li a{
+    display:block;
+    min-height:auto;
+    margin-top:auto;
+    font-weight:500;
+    font-size:1.4rem;
+    color:black;
+    line-height:2.2rem;
+    text-transform:none
+}
+header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation li ul.submenu .submenu{
+    display:none!important
+}
+header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation li ul.submenu{
+    display:block;
+    position:static
+}
+

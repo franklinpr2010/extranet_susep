@@ -32,7 +32,8 @@ if( $work->have_posts() ):
                             //Construir quatro categorias no wordpress para cada sidebar
                             if (in_category('thumbnails-serv-cidadao')):
                                 ?>
-                                <a class="list-item" href="<?php echo get_post_meta(get_the_ID(), 'link', true) ?>">
+                                
+                                <a  class="list-item" href="<?php echo get_post_meta(get_the_ID(), 'link', true) ?>">
                                     <span class="categoria">
                                         <?php echo get_the_title();?>	
                                     </span>
@@ -48,6 +49,11 @@ if( $work->have_posts() ):
                                 echo 'Não existem posts a serem mostrados';
                             endif; wp_reset_query();
                         ?>
+                           <div class="tile tile-default" id="eaa20091-0fd2-4d09-abaf-ff2988e41367">
+                    <div class="outstanding-header tile-content">
+                        <a class="outstanding-link" href="mais-noticias">MAIS SERVIÇOS</a>
+                    </div>
+                </div>
                         </div>
                     </div>
 
