@@ -26,6 +26,7 @@ if( $work->have_posts() ):
                     </h2>
                         </div>
                         <div class="itens">
+                      
                             <?php
                         while($work -> have_posts()):
                             $work->the_post();
@@ -49,6 +50,7 @@ if( $work->have_posts() ):
                                 echo 'Não existem posts a serem mostrados';
                             endif; wp_reset_query();
                         ?>
+                        
                            <div class="tile tile-default" id="eaa20091-0fd2-4d09-abaf-ff2988e41367">
                     <div class="outstanding-header tile-content">
                         <a class="outstanding-link" href="mais-noticias">MAIS SERVIÇOS</a>

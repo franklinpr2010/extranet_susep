@@ -29,8 +29,14 @@ $args = array(
                                     if (in_category('thumbnails-planos-produtos')):
                             ?>
                                 <a class="list-item" href="<?php the_permalink(); ?>">
-                                    <i aria-hidden="true" class="<?php echo get_post_meta(get_the_ID(), 'fontawesome', true) ?>"></i>
-                                    <span class="titulo"><?php echo get_the_title()?></span>
+                                <div class="d-flex flex-column mb-3">
+                                    <div id="img-planos-produtos">
+                                         <img class="text-center" src="<?php the_post_thumbnail_url()?>">
+                                    </div>
+                                    <div id="title-planos-produtos">
+                                        <span class="text-center" class="titulo"><?php echo get_the_title()?></span>
+                                    </div>
+                                 </div>
                                     <div class="back">
                                         <!-- <span class="titulo" tal:content="obj/title"></span> -->
                                         <span class="descricao"> <?php echo get_the_excerpt();?></span>

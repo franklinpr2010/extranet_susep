@@ -1022,7 +1022,7 @@ body header#main-header{
     transition:top .2s ease-in-out
 }
 body header#main-header.nav-up{
-    top:-75px!important
+    top:-110px!important
 }
 @media only screen and (max-width:767px){
     body header#main-header.nav-up{
@@ -1058,7 +1058,7 @@ body[data-browser-version-msg=true] header#main-header.nav-down{
     transition:all .2s ease-in-out
 }
 body header#main-header.nav-up #logo #portal-img{
-    background:transparent url(https://www.gov.br/casacivil/++theme++padrao_govbr/++theme++padrao_govbr/++theme++padrao_govbr/img/govbr-colorido-b.png) no-repeat 0 70%/54px auto;
+    background:transparent url(http://13.58.92.31/wp-content/uploads/2020/04/logo_susep.png) no-repeat 0 70%/54px auto;
     top:70px;
     height:24px;
     width:56px
@@ -3278,9 +3278,9 @@ header#main-header .header-wrapper #logo{
     flex-grow:1;
     font-size:26px;
     font-weight:400;
-    margin:0 auto;
+    margin-left:30px;
     background:transparent url(http://13.58.92.31/wp-content/uploads/2020/04/logo_susep.png) no-repeat 0 100%/250px 50px;
-    height:70px;
+    height:50px;
     min-width:400px;
     -webkit-transition:background-position .3s ease-in-out,background-size .3s ease-in-out;
     -o-transition:background-position .3s ease-in-out,background-size .3s ease-in-out;
@@ -12604,5 +12604,24 @@ header#main-header .navigation-wrapper .navigation-content .header-wrapper .list
 header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation li ul.submenu{
     display:block;
     position:static
+}
+
+#img-planos-produtos{
+    width:100px;
+    height:100px;
+    float:left;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+#img-planos-produtos > img {
+    width: 100%;
+    height: 100%;
+}
+
+#itens-link-cidadao {
+    height:100%;
+  
+    width: 100%;
 }
 

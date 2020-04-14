@@ -2,7 +2,7 @@
 
 <footer class="portal-footer">
     <div class="footer-wrapper">
-        <div class="govbr-logo"></div>
+        <div style="visibility:hidden" class="govbr-logo"></div>
         <!--<div class="colunas-rodape">
     <div class="coluna-menu">-->
        
@@ -11,14 +11,7 @@
 
         <div class="redes-e-logos">
             <div class="redes-sociais">
-                <h3>Redes sociais</h3>
-                <ul class="">
-
-                    <li class="">
-                        <a href="https://www.linkedin.com/company/susep"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
-
-                </ul>
+            <div  class="govbr-logo"></div>
             </div>
             <div id="footer-brasil">
                 <div id="wrapper-footer-brasil">

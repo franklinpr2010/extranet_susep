@@ -8,7 +8,8 @@
     
                     <li>
                         <a href="https://www.linkedin.com/company/susep">
-                            <i class="fab fa-linkedin-in"></i>
+                            <i style="color:#0077B5;" class="fab fa-linkedin fa-3x"></i>
+                            
                         </a>
                     </li>
                     <li>
