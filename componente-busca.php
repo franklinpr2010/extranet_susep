@@ -28,8 +28,11 @@ while( $the_query->have_posts()) :  $the_query->the_post(); ?>
     <a href='<?php  echo home_url('search'); ?>' accesskey="5">Busca Avançada…</a>
 </div>
 
-<button class="close" aria-label="Fechar busca"><i class="fas fa-times"></i></button>
+
+
+
 </div>
+
 <?php endwhile; wp_reset_query(); ?>
 
 

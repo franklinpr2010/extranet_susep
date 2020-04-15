@@ -2,7 +2,7 @@
 
 <footer class="portal-footer">
     <div class="footer-wrapper">
-        <div style="visibility:hidden" class="govbr-logo"></div>
+       
         <!--<div class="colunas-rodape">
     <div class="coluna-menu">-->
        

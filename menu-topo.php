@@ -3,15 +3,16 @@
                 <!--Menu do topo-->
                 <ul>
                     <li>
-                        <a class="link-acesso" href="https://www.gov.br/accessibility-info">Site Antigo</a>
+                        <a class="link-acesso" href="http://www.susep.gov.br/">Site Antigo</a>
                     </li>
-    
-                    <li>
-                        <a href="https://www.linkedin.com/company/susep">
-                            <i style="color:#0077B5;" class="fab fa-linkedin fa-3x"></i>
-                            
-                        </a>
-                    </li>
+                    <div id="linkedin">
+                        <li>
+                            <a href="https://www.linkedin.com/company/susep">
+                                <i style="color:#0077B5;" class="fab fa-linkedin fa-3x"></i>
+                                
+                            </a>
+                        </li>
+                    </div>
                     <li>
                         <a href="#" class="link-contraste">
                             <i class="fas fa-adjust"></i>

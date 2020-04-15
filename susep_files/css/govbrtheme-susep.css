@@ -565,7 +565,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     font-family:rawline,sans-serif;
     font-weight:400;
     font-size:1.6rem;
-    color:#555;
     line-height:1.75;
     margin:0;
     padding:0;
@@ -1078,7 +1077,7 @@ body header#main-header.nav-up #logo #portal-img{
 #portal-searchbox{
     -webkit-transition:top .2s ease-in-out;
     -o-transition:top .2s ease-in-out;
-    transition:top .2s ease-in-out
+    transition:top .2s ease-in-out;
 }
 
 body.userrole-authenticated header#main-header{
@@ -1277,7 +1276,7 @@ header#main-header .navigation-wrapper{
 }
 @media only screen and (max-width:767px){
     header#main-header .navigation-wrapper{
-        top:60px;
+        top:80px;
         max-height:calc(100vh - 95px)
     }
 }
@@ -2690,7 +2689,7 @@ body.userrole-authenticated header#main-header #beta,header#main-header #beta{
     background-color:#f8f8f8;
     -webkit-box-shadow:0 3px 6px 0 rgba(0,0,0,.16);
     box-shadow:0 3px 6px 0 rgba(0,0,0,.16);
-    padding:30px 32px;
+    padding:15px 20px;
     color:#000;
     line-height:32px;
     position:relative;
@@ -3286,16 +3285,56 @@ header#main-header .header-wrapper #logo{
     -o-transition:background-position .3s ease-in-out,background-size .3s ease-in-out;
     transition:background-position .3s ease-in-out,background-size .3s ease-in-out
 }
+
+
 @media only screen and (max-width:767px){
+
+
     header#main-header .header-wrapper #logo{
-        position:fixed;
-        background-position:center 20px;
-        background-size:63px 22px;
-        margin:0 auto;
+
+        position:absolute;
+        background-position:center;
+        background-size: contain;
+        margin-top:5px;
         width:100%;
         text-align:center;
         z-index:0;
+   
+        display:inline-block
     }
+
+    header#main-header .header-wrapper #portal-img {
+        position: absolute;
+        width: 50px;
+        height: 20px;
+        display: block;
+    }
+
+    body header#main-header.nav-up #logo #portal-img {
+        top: 70px;
+        background: none;
+    }
+
+    header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation li a {
+        display: block;
+    min-height: 48px;
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: black;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+    }
+
+    #portal-searchbox.open button {
+        z-index:200
+    }
+
+    #portal-searchbox button {
+        z-index: 0;
+    }
+
+ 
 }
 
 @media only screen and (max-width:767px){
@@ -3412,7 +3451,10 @@ header#main-header .header-accessibility{
     -webkit-box-flex:1;
     -ms-flex:1;
     flex:1;
-    text-align:right
+    text-align:right;
+  
+
+
 }
 @media only screen and (max-width:767px){
     header#main-header .header-accessibility ul li a{
@@ -3472,7 +3514,7 @@ header#main-header .header-accessibility{
     padding:4px 0 4px 4px
 }
 .header-accessibility li a.link-contraste i{
-    padding:8px;
+    padding:4px;
     color:#1351b4
 }
 .header-accessibility li a.link-acesso{
@@ -3859,7 +3901,7 @@ footer.portal-footer{
     color:#fff;
     background-color:#071d41;
     padding-top:64px;
-    margin-bottom:0;
+    margin-top:100px;
     font-size:75%
 }
 @media only screen and (max-width:1023px){
@@ -12574,7 +12616,7 @@ header#main-header .navigation-wrapper .navigation-content .header-wrapper .list
 header#main-header .navigation-wrapper .navigation-content .header-wrapper .list-navigation li a{
     display:block;
     min-height:48px;
-    margin-top:16px;
+    margin-top:40px;
     font-weight:700;
     font-size:1.6rem;
     color:black;
@@ -12623,5 +12665,18 @@ header#main-header .navigation-wrapper .navigation-content .header-wrapper .list
     height:100%;
   
     width: 100%;
+}
+.header-accessibility  #linkedin {
+    display: inline;
+}
+
+.header-accessibility #linkedin li i {
+    height:auto;
+    font-size: 25px;
+    width: auto;
+}
+
+.header-accessibility #linkedin li a {
+    padding: 8px;
 }
 

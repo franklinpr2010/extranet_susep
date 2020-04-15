@@ -1,16 +1,4 @@
-<?php
 
-$args = array(
-    'posts_per_page' => 8,
-    'category__in' => array(7)
-);
-
-//permite uma cópia do loop wordpress padrão para modificar como quiser ( Posts, Categorias )
-$work = new WP_Query( $args );
-
-//se tiver posts
-if( $work->have_posts() ):
-?>
     <div class="row">
         <div class="row-content">
 
@@ -27,29 +15,36 @@ if( $work->have_posts() ):
                         </div>
                         <div class="itens">
                       
+                         
                             <?php
-                        while($work -> have_posts()):
-                            $work->the_post();
-                            //Construir quatro categorias no wordpress para cada sidebar
-                            if (in_category('thumbnails-serv-cidadao')):
+                                   $args = array(
+                                       'post_type' => 'servicos',
+                                       'posts_per_page' => 6
+                                   );
+                                   $the_query = new WP_Query($args)
+                                   //se tiver posts
                                 ?>
+                                   <?php
+                            if( $the_query->have_posts() ): 
+                                    while($the_query->have_posts()) : $the_query->the_post(); ?>
+                                <a  class="list-item br-card is-large is-change-content is-arrow" href="<?php the_permalink() ?>">
                                 
-                                <a  class="list-item" href="<?php echo get_post_meta(get_the_ID(), 'link', true) ?>">
-                                    <span class="categoria">
-                                        <?php echo get_the_title();?>	
-                                    </span>
-                                    <span class="texto">
-                                        <!--Obtem o resumo-->
-                                        <?php echo get_the_excerpt();?>	
-                                    </span>
+                                <div class="d-flex flex-row bd-highlight mb-2">
+                                <div class="p-2 bd-highlight">
+                                <span class="icon" style="color:#0c326f">
+                                    <i class="<?php the_field('fontaewsome') ?>"></i>
+                                </span>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                <span class="title">
+                                     <?php the_title() ?>
+                                </span>
+                                </diV>
+                                </div>
+                                    <p class="text"> <?php the_field('textoresumido') ?></p>
                                 </a>
-                                <?php
-                                endif;    
-                                endwhile;
-                            else:    
-                                echo 'Não existem posts a serem mostrados';
-                            endif; wp_reset_query();
-                        ?>
+                                <?php endwhile; ?>
+                        <?php endif; ?>
                         
                            <div class="tile tile-default" id="eaa20091-0fd2-4d09-abaf-ff2988e41367">
                     <div class="outstanding-header tile-content">
@@ -64,4 +59,4 @@ if( $work->have_posts() ):
             </div>
 
         </div>
-    </div>
+   </div>

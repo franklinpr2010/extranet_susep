@@ -23,7 +23,7 @@ $the_query = new WP_Query($args)
     <!--Tag Manager-->
     <?php include 'tag-manager.php'; ?>
     <!--Header-->
-    <?php include 'header.php'; ?>
+    <?php include 'header-susep.php'; ?>
     <!--Header-->
     <?php include 'body.php'; ?>
     <?php include 'libras.php'; ?>
