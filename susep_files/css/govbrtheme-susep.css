@@ -6314,7 +6314,8 @@ footer.portal-footer .redes-e-logos #footer-brasil a{
 }
 .portaltype-collective-cover-content .row.linha-destaquehome{
     padding:0;
-    margin-bottom:36px
+    margin-bottom:36px;
+
 }
 .portaltype-collective-cover-content .row.linha-destaquehome.topo-com-degrade .tile-content{
     background:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),to(rgba(0,0,0,.9)));
